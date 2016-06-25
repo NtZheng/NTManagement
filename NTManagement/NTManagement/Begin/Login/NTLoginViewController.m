@@ -20,7 +20,9 @@
     [super viewDidLoad];
     self.myTableView.dataSource = self;
     self.myTableView.delegate = self;
-//    self.myTableView.scrollEnabled = NO;
+    
+    self.view.backgroundColor = [UIColor colorWithWhite:0.96 alpha:1.0];
+    
 }
 
 #pragma mark - methods
