@@ -94,6 +94,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fvw-Qo-L3c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.38039215686274508" green="0.57647058823529407" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Pj8-zW-LoU" kind="relationship" relationship="rootViewController" id="c8M-Rg-WbL"/>
@@ -171,17 +172,15 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="hUl-L0-SYX">
-                                <rect key="frame" x="20" y="263" width="335" height="67"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="hUl-L0-SYX">
+                                <rect key="frame" x="20" y="251" width="335" height="46"/>
+                                <color key="backgroundColor" red="0.38039215686274508" green="0.57647058823529407" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="登录">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="登录"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="29"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -189,14 +188,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Wc6-zu-Oas">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="2K8-Et-J3C">
-                            <connections>
-                                <action selector="back:" destination="Pj8-zW-LoU" id="1pR-lH-JiZ"/>
-                            </connections>
+                        <barButtonItem key="leftBarButtonItem" style="done" id="sZ3-bV-lyc">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TR9-Ob-erP">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="dismiss"/>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="dismissButton" destination="TR9-Ob-erP" id="xb4-k2-qEY"/>
                         <outlet property="forgetPasswordButton" destination="hB1-S5-bqO" id="Xn8-LW-DKr"/>
                         <outlet property="loginButton" destination="hUl-L0-SYX" id="JZH-Tp-GvX"/>
                         <outlet property="myTableView" destination="Tde-oy-g90" id="gcB-Qg-Rpi"/>
@@ -207,4 +209,7 @@
             <point key="canvasLocation" x="35.5" y="-351.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dismiss" width="200" height="200"/>
+    </resources>
 </document>

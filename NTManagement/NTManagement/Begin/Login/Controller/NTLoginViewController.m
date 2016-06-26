@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UIButton *forgetPasswordButton;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *dismissButton;
 
 @end
 
@@ -32,14 +33,13 @@
     self.view.backgroundColor = [UIColor colorWithWhite:0.96 alpha:1.0];
     
     [self.forgetPasswordButton addTarget:self action:@selector(forgetPasswordAction) forControlEvents:UIControlEventTouchUpInside];
-    
-    
+    [self.dismissButton addTarget:self action:@selector(dismissAction) forControlEvents:UIControlEventTouchUpInside];
     
     
 }
 
 #pragma mark - methods
-- (IBAction)back:(id)sender {
+- (void)dismissAction {
     [self dismissViewControllerAnimated:YES completion:^{
         
     }];
