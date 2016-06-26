@@ -7,6 +7,7 @@
 //
 
 #import "NTLoginViewController.h"
+#import "NTLoginTableViewCell.h"
 
 @interface NTLoginViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -34,8 +35,8 @@
 
 #pragma mark - dataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    cell.textLabel.text = @"nineteen";
+//    NTTableViewCell *cell = [[NTTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];// 纯代码自定义cell使用的方法
+    NTLoginTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];// 利用storyboard自定义cell的方法
     return cell;
 }
 

@@ -12,7 +12,8 @@
 		6A666EE41D1ADA0100F590C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A666EE21D1ADA0100F590C9 /* LaunchScreen.storyboard */; };
 		6A666EEF1D1ADA0100F590C9 /* NTManagementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A666EEE1D1ADA0100F590C9 /* NTManagementTests.m */; };
 		6A666EFA1D1ADA0100F590C9 /* NTManagementUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A666EF91D1ADA0100F590C9 /* NTManagementUITests.m */; };
-		6AB016F41D1C254B00461757 /* NTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB016ED1D1C254B00461757 /* NTLoginViewController.m */; };
+		6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7105D81D201CA70012AA99 /* NTLoginViewController.m */; };
+		6A7105DE1D201CA70012AA99 /* NTLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7105DC1D201CA70012AA99 /* NTLoginTableViewCell.m */; };
 		6AB016F51D1C254B00461757 /* NTBeginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB016F01D1C254B00461757 /* NTBeginViewController.m */; };
 		6AB016F61D1C254B00461757 /* NTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB016F31D1C254B00461757 /* NTRegisterViewController.m */; };
 		6AEC8A881D1C172D00648C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEC8A851D1C172D00648C3F /* AppDelegate.m */; };
@@ -47,8 +48,10 @@
 		6A666EF51D1ADA0100F590C9 /* NTManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A666EF91D1ADA0100F590C9 /* NTManagementUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTManagementUITests.m; sourceTree = "<group>"; };
 		6A666EFB1D1ADA0100F590C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6AB016EC1D1C254B00461757 /* NTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLoginViewController.h; sourceTree = "<group>"; };
-		6AB016ED1D1C254B00461757 /* NTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLoginViewController.m; sourceTree = "<group>"; };
+		6A7105D71D201CA70012AA99 /* NTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLoginViewController.h; sourceTree = "<group>"; };
+		6A7105D81D201CA70012AA99 /* NTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLoginViewController.m; sourceTree = "<group>"; };
+		6A7105DB1D201CA70012AA99 /* NTLoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLoginTableViewCell.h; sourceTree = "<group>"; };
+		6A7105DC1D201CA70012AA99 /* NTLoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLoginTableViewCell.m; sourceTree = "<group>"; };
 		6AB016EF1D1C254B00461757 /* NTBeginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTBeginViewController.h; sourceTree = "<group>"; };
 		6AB016F01D1C254B00461757 /* NTBeginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTBeginViewController.m; sourceTree = "<group>"; };
 		6AB016F21D1C254B00461757 /* NTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRegisterViewController.h; sourceTree = "<group>"; };
@@ -145,11 +148,37 @@
 			path = NTManagementUITests;
 			sourceTree = "<group>";
 		};
+		6A7105D61D201CA70012AA99 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A7105D71D201CA70012AA99 /* NTLoginViewController.h */,
+				6A7105D81D201CA70012AA99 /* NTLoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6A7105D91D201CA70012AA99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A7105DA1D201CA70012AA99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A7105DB1D201CA70012AA99 /* NTLoginTableViewCell.h */,
+				6A7105DC1D201CA70012AA99 /* NTLoginTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6AB016EB1D1C254B00461757 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				6AB016EC1D1C254B00461757 /* NTLoginViewController.h */,
-				6AB016ED1D1C254B00461757 /* NTLoginViewController.m */,
+				6A7105D91D201CA70012AA99 /* Model */,
+				6A7105DA1D201CA70012AA99 /* View */,
+				6A7105D61D201CA70012AA99 /* Controller */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -268,6 +297,7 @@
 		6A666EC91D1ADA0000F590C9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = NT;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = nineteen;
 				TargetAttributes = {
@@ -340,10 +370,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AB016F61D1C254B00461757 /* NTRegisterViewController.m in Sources */,
+				6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */,
 				6AB016F51D1C254B00461757 /* NTBeginViewController.m in Sources */,
+				6A7105DE1D201CA70012AA99 /* NTLoginTableViewCell.m in Sources */,
 				6AEC8A881D1C172D00648C3F /* AppDelegate.m in Sources */,
 				6AEC8A8A1D1C172D00648C3F /* main.m in Sources */,
-				6AB016F41D1C254B00461757 /* NTLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
