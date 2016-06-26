@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UIButton *forgetPasswordButton;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -22,6 +23,7 @@
     UIButton *tempButton;// 为了扩展cell中的button的作用范围（在ARC下不用考虑怎么去销毁）
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.myTableView.dataSource = self;
@@ -30,6 +32,9 @@
     self.view.backgroundColor = [UIColor colorWithWhite:0.96 alpha:1.0];
     
     [self.forgetPasswordButton addTarget:self action:@selector(forgetPasswordAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
     
 }
 
