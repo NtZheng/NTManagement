@@ -11,4 +11,5 @@
 @interface NTLoginTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *myImageView;
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
+@property (weak, nonatomic) IBOutlet UIButton *myButton;
 @end
