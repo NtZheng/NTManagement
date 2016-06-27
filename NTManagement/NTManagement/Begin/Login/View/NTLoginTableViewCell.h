@@ -2,7 +2,7 @@
 //  NTLoginTableViewCell.h
 //  NTManagement
 //
-//  Created by 郑祯 on 16/6/26.
+//  Created by 郑祯 on 16/6/27.
 //  Copyright © 2016年 nineteen. All rights reserved.
 //
 
@@ -12,4 +12,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *myImageView;
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
 @property (weak, nonatomic) IBOutlet UIButton *myButton;
+
 @end

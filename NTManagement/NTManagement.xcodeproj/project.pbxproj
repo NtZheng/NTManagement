@@ -13,7 +13,7 @@
 		6A666EEF1D1ADA0100F590C9 /* NTManagementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A666EEE1D1ADA0100F590C9 /* NTManagementTests.m */; };
 		6A666EFA1D1ADA0100F590C9 /* NTManagementUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A666EF91D1ADA0100F590C9 /* NTManagementUITests.m */; };
 		6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7105D81D201CA70012AA99 /* NTLoginViewController.m */; };
-		6A7105DE1D201CA70012AA99 /* NTLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7105DC1D201CA70012AA99 /* NTLoginTableViewCell.m */; };
+		6A7E4E191D214184000E68C1 /* NTLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E4E181D214184000E68C1 /* NTLoginTableViewCell.m */; };
 		6AEC8A881D1C172D00648C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEC8A851D1C172D00648C3F /* AppDelegate.m */; };
 		6AEC8A8A1D1C172D00648C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEC8A871D1C172D00648C3F /* main.m */; };
 /* End PBXBuildFile section */
@@ -48,9 +48,9 @@
 		6A666EFB1D1ADA0100F590C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A7105D71D201CA70012AA99 /* NTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLoginViewController.h; sourceTree = "<group>"; };
 		6A7105D81D201CA70012AA99 /* NTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLoginViewController.m; sourceTree = "<group>"; };
-		6A7105DB1D201CA70012AA99 /* NTLoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLoginTableViewCell.h; sourceTree = "<group>"; };
-		6A7105DC1D201CA70012AA99 /* NTLoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLoginTableViewCell.m; sourceTree = "<group>"; };
 		6A7270121D204982003863A9 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6A7E4E171D214184000E68C1 /* NTLoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLoginTableViewCell.h; sourceTree = "<group>"; };
+		6A7E4E181D214184000E68C1 /* NTLoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLoginTableViewCell.m; sourceTree = "<group>"; };
 		6AEC8A841D1C172D00648C3F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6AEC8A851D1C172D00648C3F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6AEC8A871D1C172D00648C3F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -162,8 +162,8 @@
 		6A7105DA1D201CA70012AA99 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6A7105DB1D201CA70012AA99 /* NTLoginTableViewCell.h */,
-				6A7105DC1D201CA70012AA99 /* NTLoginTableViewCell.m */,
+				6A7E4E171D214184000E68C1 /* NTLoginTableViewCell.h */,
+				6A7E4E181D214184000E68C1 /* NTLoginTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,9 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */,
-				6A7105DE1D201CA70012AA99 /* NTLoginTableViewCell.m in Sources */,
 				6AEC8A881D1C172D00648C3F /* AppDelegate.m in Sources */,
 				6AEC8A8A1D1C172D00648C3F /* main.m in Sources */,
+				6A7E4E191D214184000E68C1 /* NTLoginTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

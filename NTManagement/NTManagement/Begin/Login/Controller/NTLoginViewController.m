@@ -19,11 +19,6 @@
 
 @implementation NTLoginViewController
 
-{
-    UIButton *tempButton;// 为了扩展cell中的button的作用范围（在ARC下不用考虑怎么去销毁）
-}
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.myTableView.dataSource = self;
@@ -43,33 +38,28 @@
     }];
 }
 
-- (void)changeIsVisible {
-    tempButton.selected = tempButton.selected ? NO : YES;
+- (void)forgetPasswordAction {
+    
 }
 
-- (void)forgetPasswordAction {
+- (void)sendIdentifiedCodeAction {
     
 }
 
 #pragma mark - dataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    NTTableViewCell *cell = [[NTTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];// 纯代码自定义cell使用的方法
-    NTLoginTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];// 利用storyboard自定义cell的方法
+    NTLoginTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"loginCell"];
     if (indexPath.row == 0) {
         cell.myImageView.image = [UIImage imageNamed:@"phoneNumber.png"];
         cell.myTextField.placeholder = @"请输入手机号";
-        [cell.myButton removeFromSuperview];// 该栏不显示这个UIButton
+        [cell.myButton addTarget:self action:@selector(sendIdentifiedCodeAction) forControlEvents:UIControlEventTouchUpInside];
     } else {
         cell.myImageView.image = [UIImage imageNamed:@"password.png"];
         cell.myTextField.placeholder = @"请输入密码";
         cell.myTextField.secureTextEntry = YES;
-        
-        [cell.myButton setBackgroundImage:[UIImage imageNamed:@"invisible.png"] forState:UIControlStateNormal];
-        [cell.myButton setBackgroundImage:[UIImage imageNamed:@"visible.png"] forState:UIControlStateSelected];
-        [cell.myButton addTarget:self action:@selector(changeIsVisible) forControlEvents:UIControlEventTouchUpInside];
-        tempButton = cell.myButton;
+        [cell.myButton removeFromSuperview];
     }
-    
     return cell;
 }
 

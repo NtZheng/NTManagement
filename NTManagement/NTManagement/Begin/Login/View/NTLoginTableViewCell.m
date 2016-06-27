@@ -2,7 +2,7 @@
 //  NTLoginTableViewCell.m
 //  NTManagement
 //
-//  Created by 郑祯 on 16/6/26.
+//  Created by 郑祯 on 16/6/27.
 //  Copyright © 2016年 nineteen. All rights reserved.
 //
 
@@ -15,7 +15,5 @@
     [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;// 取消选中效果
 }
-
-
 
 @end
