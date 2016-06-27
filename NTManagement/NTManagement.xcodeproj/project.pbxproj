@@ -14,8 +14,6 @@
 		6A666EFA1D1ADA0100F590C9 /* NTManagementUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A666EF91D1ADA0100F590C9 /* NTManagementUITests.m */; };
 		6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7105D81D201CA70012AA99 /* NTLoginViewController.m */; };
 		6A7105DE1D201CA70012AA99 /* NTLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7105DC1D201CA70012AA99 /* NTLoginTableViewCell.m */; };
-		6AB016F51D1C254B00461757 /* NTBeginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB016F01D1C254B00461757 /* NTBeginViewController.m */; };
-		6AB016F61D1C254B00461757 /* NTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB016F31D1C254B00461757 /* NTRegisterViewController.m */; };
 		6AEC8A881D1C172D00648C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEC8A851D1C172D00648C3F /* AppDelegate.m */; };
 		6AEC8A8A1D1C172D00648C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEC8A871D1C172D00648C3F /* main.m */; };
 /* End PBXBuildFile section */
@@ -53,10 +51,6 @@
 		6A7105DB1D201CA70012AA99 /* NTLoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLoginTableViewCell.h; sourceTree = "<group>"; };
 		6A7105DC1D201CA70012AA99 /* NTLoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLoginTableViewCell.m; sourceTree = "<group>"; };
 		6A7270121D204982003863A9 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		6AB016EF1D1C254B00461757 /* NTBeginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTBeginViewController.h; sourceTree = "<group>"; };
-		6AB016F01D1C254B00461757 /* NTBeginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTBeginViewController.m; sourceTree = "<group>"; };
-		6AB016F21D1C254B00461757 /* NTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRegisterViewController.h; sourceTree = "<group>"; };
-		6AB016F31D1C254B00461757 /* NTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRegisterViewController.m; sourceTree = "<group>"; };
 		6AEC8A841D1C172D00648C3F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6AEC8A851D1C172D00648C3F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6AEC8A871D1C172D00648C3F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -184,24 +178,6 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		6AB016EE1D1C254B00461757 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				6AB016EF1D1C254B00461757 /* NTBeginViewController.h */,
-				6AB016F01D1C254B00461757 /* NTBeginViewController.m */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		6AB016F11D1C254B00461757 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				6AB016F21D1C254B00461757 /* NTRegisterViewController.h */,
-				6AB016F31D1C254B00461757 /* NTRegisterViewController.m */,
-			);
-			path = Register;
-			sourceTree = "<group>";
-		};
 		6AEC8A831D1C172D00648C3F /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,9 +192,7 @@
 		6AEC8A8B1D1C180D00648C3F /* Begin */ = {
 			isa = PBXGroup;
 			children = (
-				6AB016EE1D1C254B00461757 /* Main */,
 				6AB016EB1D1C254B00461757 /* Login */,
-				6AB016F11D1C254B00461757 /* Register */,
 			);
 			path = Begin;
 			sourceTree = "<group>";
@@ -371,9 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AB016F61D1C254B00461757 /* NTRegisterViewController.m in Sources */,
 				6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */,
-				6AB016F51D1C254B00461757 /* NTBeginViewController.m in Sources */,
 				6A7105DE1D201CA70012AA99 /* NTLoginTableViewCell.m in Sources */,
 				6AEC8A881D1C172D00648C3F /* AppDelegate.m in Sources */,
 				6AEC8A8A1D1C172D00648C3F /* main.m in Sources */,
