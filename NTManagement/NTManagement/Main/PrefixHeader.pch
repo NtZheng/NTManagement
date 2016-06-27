@@ -10,7 +10,7 @@
 #define PrefixHeader_pch
 
 // 颜色
-#define NTColor [UIColor colorWithRed:97 green:147 blue:224 alpha:1.0]
+#define NTColor [UIColor colorWithRed:97/255.0 green:147/255.0 blue:224/255.0 alpha:1.0]
 
 
 #endif

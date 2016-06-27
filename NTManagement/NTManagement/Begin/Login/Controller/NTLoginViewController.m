@@ -15,9 +15,17 @@
 @property (weak, nonatomic) IBOutlet UIButton *forgetPasswordButton;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
+// 纯代码属性
+@property (nonatomic, strong) NSTimer *timer;
+
+
 @end
 
 @implementation NTLoginViewController
+
+{
+    UIButton *tempButton;// 为了扩展cell.myButton的作用域（需要对cell.myButton的属性进行改变）
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,8 +50,29 @@
     
 }
 
+- (void)timerAction {
+    static int number = 60;// 利用static关键字：延长number的生命周期
+    [tempButton setTitle:[NSString stringWithFormat:@"等待%d秒",number] forState:UIControlStateNormal];
+    number--;
+    if (number == -1) {
+        [self.timer invalidate];// 销毁NSTimer
+        [tempButton setBackgroundColor:NTColor];
+        [tempButton setTitle:@"发送验证码" forState:UIControlStateNormal];
+    }
+}
+
 - (void)sendIdentifiedCodeAction {
-    
+    tempButton.userInteractionEnabled = NO;// 此时是不能操作UIButton的
+    [tempButton setBackgroundColor:[UIColor grayColor]];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
+}
+
+#pragma mark - 懒加载
+- (NSTimer *)timer {
+    if (_timer == nil) {
+        _timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+    }
+    return _timer;
 }
 
 #pragma mark - dataSource
@@ -54,6 +83,7 @@
         cell.myImageView.image = [UIImage imageNamed:@"phoneNumber.png"];
         cell.myTextField.placeholder = @"请输入手机号";
         [cell.myButton addTarget:self action:@selector(sendIdentifiedCodeAction) forControlEvents:UIControlEventTouchUpInside];
+        tempButton = cell.myButton;
     } else {
         cell.myImageView.image = [UIImage imageNamed:@"password.png"];
         cell.myTextField.placeholder = @"请输入密码";
