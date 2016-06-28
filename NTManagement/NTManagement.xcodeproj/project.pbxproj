@@ -16,6 +16,7 @@
 		6A7E4E191D214184000E68C1 /* NTLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E4E181D214184000E68C1 /* NTLoginTableViewCell.m */; };
 		6AEC8A881D1C172D00648C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEC8A851D1C172D00648C3F /* AppDelegate.m */; };
 		6AEC8A8A1D1C172D00648C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEC8A871D1C172D00648C3F /* main.m */; };
+		6AFF73A21D2255E4000DFBD0 /* NTLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFF73A11D2255E4000DFBD0 /* NTLockViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		6AEC8A851D1C172D00648C3F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6AEC8A871D1C172D00648C3F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6AEC8A911D1C197C00648C3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AFF73A01D2255E4000DFBD0 /* NTLockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLockViewController.h; sourceTree = "<group>"; };
+		6AFF73A11D2255E4000DFBD0 /* NTLockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLockViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				6AB016EB1D1C254B00461757 /* Login */,
+				6AFF739F1D2255B9000DFBD0 /* Lock */,
 			);
 			path = Begin;
 			sourceTree = "<group>";
@@ -209,6 +213,15 @@
 			children = (
 			);
 			path = Information;
+			sourceTree = "<group>";
+		};
+		6AFF739F1D2255B9000DFBD0 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				6AFF73A01D2255E4000DFBD0 /* NTLockViewController.h */,
+				6AFF73A11D2255E4000DFBD0 /* NTLockViewController.m */,
+			);
+			path = Lock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +361,7 @@
 				6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */,
 				6AEC8A881D1C172D00648C3F /* AppDelegate.m in Sources */,
 				6AEC8A8A1D1C172D00648C3F /* main.m in Sources */,
+				6AFF73A21D2255E4000DFBD0 /* NTLockViewController.m in Sources */,
 				6A7E4E191D214184000E68C1 /* NTLoginTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
