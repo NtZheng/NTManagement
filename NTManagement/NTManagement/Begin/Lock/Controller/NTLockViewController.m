@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+    self.view.backgroundColor = [UIColor colorWithWhite:0.96 alpha:1.0];
+
 }
 
 #pragma mark - methods

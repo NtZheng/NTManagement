@@ -12,5 +12,8 @@
 // 颜色
 #define NTColor [UIColor colorWithRed:97/255.0 green:147/255.0 blue:224/255.0 alpha:1.0]
 
+// 引入类
+#import "UIButton+Extension.h"
+#import "UIView+Extension.h"
 
 #endif
