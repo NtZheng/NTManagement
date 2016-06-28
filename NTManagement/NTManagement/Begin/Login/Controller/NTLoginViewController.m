@@ -58,6 +58,7 @@
         [self.timer invalidate];// 销毁NSTimer
         [tempButton setBackgroundColor:NTColor];
         [tempButton setTitle:@"发送验证码" forState:UIControlStateNormal];
+        tempButton.userInteractionEnabled = YES;
     }
 }
 
