@@ -192,8 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				6A7F20911D24053D0032F60A /* Main */,
-				6A7F20921D24053D0032F60A /* Readed */,
 				6A7F20931D24053D0032F60A /* Unreaded */,
+				6A7F20921D24053D0032F60A /* Readed */,
 				6A7F20901D24053D0032F60A /* Information */,
 			);
 			path = Primary;
