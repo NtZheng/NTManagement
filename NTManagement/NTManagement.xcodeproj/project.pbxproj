@@ -20,6 +20,8 @@
 		6AA7628B1D22A27600E93E50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA762861D22A27600E93E50 /* AppDelegate.m */; };
 		6AA7628C1D22A27600E93E50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA762871D22A27600E93E50 /* main.m */; };
 		6AA7628E1D22A38800E93E50 /* NTLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7628D1D22A38800E93E50 /* NTLockView.m */; };
+		6AD8A8FA1D23EAC500F7B07A /* NTLockViewUsedTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A8F91D23EAC500F7B07A /* NTLockViewUsedTime.m */; };
+		6AE4B8141D23C904005C9BD8 /* NTLockResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE4B8131D23C904005C9BD8 /* NTLockResultView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,10 @@
 		6AA762871D22A27600E93E50 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6AA762881D22A27600E93E50 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6AA7628D1D22A38800E93E50 /* NTLockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLockView.m; sourceTree = "<group>"; };
+		6AD8A8F81D23EAC500F7B07A /* NTLockViewUsedTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLockViewUsedTime.h; sourceTree = "<group>"; };
+		6AD8A8F91D23EAC500F7B07A /* NTLockViewUsedTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLockViewUsedTime.m; sourceTree = "<group>"; };
+		6AE4B8121D23C904005C9BD8 /* NTLockResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLockResultView.h; sourceTree = "<group>"; };
+		6AE4B8131D23C904005C9BD8 /* NTLockResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLockResultView.m; sourceTree = "<group>"; };
 		6AEC8A911D1C197C00648C3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +207,8 @@
 			children = (
 				6AA7627C1D229E8400E93E50 /* NTLockView.h */,
 				6AA7628D1D22A38800E93E50 /* NTLockView.m */,
+				6AE4B8121D23C904005C9BD8 /* NTLockResultView.h */,
+				6AE4B8131D23C904005C9BD8 /* NTLockResultView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +243,23 @@
 				6A7105D61D201CA70012AA99 /* Controller */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		6AD8A8F61D23EA9900F7B07A /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				6AD8A8F71D23EA9900F7B07A /* Singleton */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		6AD8A8F71D23EA9900F7B07A /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				6AD8A8F81D23EAC500F7B07A /* NTLockViewUsedTime.h */,
+				6AD8A8F91D23EAC500F7B07A /* NTLockViewUsedTime.m */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 		6AEC8A831D1C172D00648C3F /* Main */ = {
@@ -275,6 +300,7 @@
 				6AA762791D229E6400E93E50 /* Model */,
 				6AA7627A1D229E6400E93E50 /* View */,
 				6AA762761D229E6400E93E50 /* Controller */,
+				6AD8A8F61D23EA9900F7B07A /* Others */,
 			);
 			path = Lock;
 			sourceTree = "<group>";
@@ -417,10 +443,12 @@
 				6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */,
 				6AA7628B1D22A27600E93E50 /* AppDelegate.m in Sources */,
 				6AA762891D22A27600E93E50 /* UIButton+Extension.m in Sources */,
+				6AE4B8141D23C904005C9BD8 /* NTLockResultView.m in Sources */,
 				6AA7627B1D229E6400E93E50 /* NTLockViewController.m in Sources */,
 				6AA7628E1D22A38800E93E50 /* NTLockView.m in Sources */,
 				6AA7628C1D22A27600E93E50 /* main.m in Sources */,
 				6A7E4E191D214184000E68C1 /* NTLoginTableViewCell.m in Sources */,
+				6AD8A8FA1D23EAC500F7B07A /* NTLockViewUsedTime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

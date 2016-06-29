@@ -7,6 +7,7 @@
 //
 
 #import "NTLockView.h"
+#import "NTLockViewUsedTime.h"
 
 @interface NTLockView ()
 
@@ -107,11 +108,16 @@ static const int widthAndHeight = 80;
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSMutableArray *indexMutableArray = [NSMutableArray array];
     for (UIButton *tempButton in self.selectedItems) {
+        [indexMutableArray addObject:@(tempButton.tag)];
         tempButton.selected = NO;
     }
     [self.selectedItems removeAllObjects];
     [self setNeedsDisplay];
+    if ([NTLockViewUsedTime sharedLockViewUsedTime].usedTimes < 2) {
+        self.finishDrawPath(indexMutableArray);// 回调block
+    }
 }
 
 #pragma mark - 功能性的抽取方法

@@ -104,7 +104,7 @@
             </objects>
             <point key="canvasLocation" x="-306.5" y="-345.5"/>
         </scene>
-        <!--Lock View Controller-->
+        <!--手势密码-->
         <scene sceneID="YkK-UJ-4A2">
             <objects>
                 <viewController id="AZc-44-fDh" customClass="NTLockViewController" sceneMemberID="viewController">
@@ -116,14 +116,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NeT-Jr-llw" customClass="NTLockResultView">
+                                <rect key="frame" x="145" y="106" width="85" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="绘制解锁图案" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ha-6v-r6v">
+                                <rect key="frame" x="136" y="199" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zjg-V3-tec" customClass="NTLockView">
-                                <rect key="frame" x="52" y="276" width="270" height="270"/>
+                                <rect key="frame" x="52" y="254" width="270" height="270"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ywe-1T-elR">
+                    <navigationItem key="navigationItem" title="手势密码" id="Ywe-1T-elR">
                         <barButtonItem key="leftBarButtonItem" style="done" id="rxW-Zi-4YC">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NCy-eD-6JJ">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
@@ -135,6 +145,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="backButton" destination="NCy-eD-6JJ" id="9N4-af-0Wa"/>
+                        <outlet property="guideLabel" destination="7Ha-6v-r6v" id="t4x-we-I2B"/>
+                        <outlet property="lockResultView" destination="NeT-Jr-llw" id="sTo-PC-SlX"/>
+                        <outlet property="lockView" destination="Zjg-V3-tec" id="ln6-In-9gO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3w-Jj-gNF" userLabel="First Responder" sceneMemberID="firstResponder"/>

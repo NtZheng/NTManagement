@@ -10,4 +10,6 @@
 
 @interface NTLockView : UIView
 
+@property (nonatomic, copy) void (^finishDrawPath)(NSMutableArray *);
+
 @end
