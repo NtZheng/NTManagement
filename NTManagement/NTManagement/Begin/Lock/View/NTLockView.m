@@ -19,7 +19,7 @@
 
 // 将这两个对于锁定UI定制的属性抽出来，实现封装（不关心内部怎么实现，通过这两个属性即可改变UI布局）
 static const int columnAndRow = 3;// 使用const变量而不是宏定义
-static const int widthAndHeight = 50;
+static const int widthAndHeight = 80;
 
 - (void)awakeFromNib {
     [self setUpAllItems];
@@ -40,8 +40,8 @@ static const int widthAndHeight = 50;
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.tag = i;
         button.userInteractionEnabled = NO;// 避免button的点击效果影响到绘制图像
-        [button setBackgroundImage:[UIImage imageNamed:@"gesture_node_normal"] forState:UIControlStateNormal];
-        [button setBackgroundImage:[UIImage imageNamed:@"gesture_node_selected"] forState:UIControlStateSelected];
+        [button setImage:[UIImage imageNamed:@"normalLockButton"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"selectedLockButton"] forState:UIControlStateSelected];
         [self addSubview:button];
     }
     [self setUpItemFrame];
@@ -77,10 +77,10 @@ static const int widthAndHeight = 50;
         [path addLineToPoint:self.currentPoint];
         
         // 设置绘制路径的样式
-        [path setLineWidth:10];// 宽度
-        [[UIColor greenColor] set];// 颜色
-        [path setLineJoinStyle:kCGLineJoinRound];// 样式
-        [path stroke];// ?
+        [path setLineWidth:3];// 宽度
+        [[UIColor colorWithRed:87/255.0 green:169/255.0 blue:223/255.0 alpha:1.0] set];// 颜色
+        [path setLineJoinStyle:kCGLineJoinMiter];// 样式
+        [path stroke];
     }
 }
 
