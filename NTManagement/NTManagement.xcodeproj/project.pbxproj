@@ -20,7 +20,8 @@
 		6AA7628B1D22A27600E93E50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA762861D22A27600E93E50 /* AppDelegate.m */; };
 		6AA7628C1D22A27600E93E50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA762871D22A27600E93E50 /* main.m */; };
 		6AA7628E1D22A38800E93E50 /* NTLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7628D1D22A38800E93E50 /* NTLockView.m */; };
-		6AD8A8FA1D23EAC500F7B07A /* NTLockViewUsedTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A8F91D23EAC500F7B07A /* NTLockViewUsedTime.m */; };
+		6AB824F81D2405EC00B26D18 /* NTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB824F71D2405EC00B26D18 /* NTTabBarController.m */; };
+		6AB824FB1D240DBB00B26D18 /* NTLockViewSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB824FA1D240DBB00B26D18 /* NTLockViewSingleton.m */; };
 		6AE4B8141D23C904005C9BD8 /* NTLockResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE4B8131D23C904005C9BD8 /* NTLockResultView.m */; };
 /* End PBXBuildFile section */
 
@@ -68,8 +69,10 @@
 		6AA762871D22A27600E93E50 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6AA762881D22A27600E93E50 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6AA7628D1D22A38800E93E50 /* NTLockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLockView.m; sourceTree = "<group>"; };
-		6AD8A8F81D23EAC500F7B07A /* NTLockViewUsedTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLockViewUsedTime.h; sourceTree = "<group>"; };
-		6AD8A8F91D23EAC500F7B07A /* NTLockViewUsedTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLockViewUsedTime.m; sourceTree = "<group>"; };
+		6AB824F61D2405EC00B26D18 /* NTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTabBarController.h; sourceTree = "<group>"; };
+		6AB824F71D2405EC00B26D18 /* NTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTabBarController.m; sourceTree = "<group>"; };
+		6AB824F91D240DBB00B26D18 /* NTLockViewSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLockViewSingleton.h; sourceTree = "<group>"; };
+		6AB824FA1D240DBB00B26D18 /* NTLockViewSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLockViewSingleton.m; sourceTree = "<group>"; };
 		6AE4B8121D23C904005C9BD8 /* NTLockResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLockResultView.h; sourceTree = "<group>"; };
 		6AE4B8131D23C904005C9BD8 /* NTLockResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLockResultView.m; sourceTree = "<group>"; };
 		6AEC8A911D1C197C00648C3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,8 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				6AEC8A8B1D1C180D00648C3F /* Begin */,
-				6AEC8A8C1D1C180D00648C3F /* File */,
-				6AEC8A8D1D1C180D00648C3F /* Information */,
+				6A7F208F1D24053D0032F60A /* Primary */,
 				6AEC8A831D1C172D00648C3F /* Main */,
 				6A666ED41D1ADA0000F590C9 /* Supporting Files */,
 			);
@@ -184,6 +186,47 @@
 				6A7E4E181D214184000E68C1 /* NTLoginTableViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6A7F208F1D24053D0032F60A /* Primary */ = {
+			isa = PBXGroup;
+			children = (
+				6A7F20911D24053D0032F60A /* Main */,
+				6A7F20921D24053D0032F60A /* Readed */,
+				6A7F20931D24053D0032F60A /* Unreaded */,
+				6A7F20901D24053D0032F60A /* Information */,
+			);
+			path = Primary;
+			sourceTree = "<group>";
+		};
+		6A7F20901D24053D0032F60A /* Information */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		6A7F20911D24053D0032F60A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6AB824F61D2405EC00B26D18 /* NTTabBarController.h */,
+				6AB824F71D2405EC00B26D18 /* NTTabBarController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6A7F20921D24053D0032F60A /* Readed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Readed;
+			sourceTree = "<group>";
+		};
+		6A7F20931D24053D0032F60A /* Unreaded */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Unreaded;
 			sourceTree = "<group>";
 		};
 		6AA762761D229E6400E93E50 /* Controller */ = {
@@ -256,8 +299,8 @@
 		6AD8A8F71D23EA9900F7B07A /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
-				6AD8A8F81D23EAC500F7B07A /* NTLockViewUsedTime.h */,
-				6AD8A8F91D23EAC500F7B07A /* NTLockViewUsedTime.m */,
+				6AB824F91D240DBB00B26D18 /* NTLockViewSingleton.h */,
+				6AB824FA1D240DBB00B26D18 /* NTLockViewSingleton.m */,
 			);
 			path = Singleton;
 			sourceTree = "<group>";
@@ -278,20 +321,6 @@
 				6AFF739F1D2255B9000DFBD0 /* Lock */,
 			);
 			path = Begin;
-			sourceTree = "<group>";
-		};
-		6AEC8A8C1D1C180D00648C3F /* File */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = File;
-			sourceTree = "<group>";
-		};
-		6AEC8A8D1D1C180D00648C3F /* Information */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Information;
 			sourceTree = "<group>";
 		};
 		6AFF739F1D2255B9000DFBD0 /* Lock */ = {
@@ -440,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AA7628A1D22A27600E93E50 /* UIView+Extension.m in Sources */,
+				6AB824FB1D240DBB00B26D18 /* NTLockViewSingleton.m in Sources */,
 				6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */,
 				6AA7628B1D22A27600E93E50 /* AppDelegate.m in Sources */,
 				6AA762891D22A27600E93E50 /* UIButton+Extension.m in Sources */,
@@ -448,7 +478,7 @@
 				6AA7628E1D22A38800E93E50 /* NTLockView.m in Sources */,
 				6AA7628C1D22A27600E93E50 /* main.m in Sources */,
 				6A7E4E191D214184000E68C1 /* NTLoginTableViewCell.m in Sources */,
-				6AD8A8FA1D23EAC500F7B07A /* NTLockViewUsedTime.m in Sources */,
+				6AB824F81D2405EC00B26D18 /* NTTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

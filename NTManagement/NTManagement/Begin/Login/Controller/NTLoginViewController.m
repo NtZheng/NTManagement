@@ -37,6 +37,7 @@
     [self.forgetPasswordButton addTarget:self action:@selector(forgetPasswordAction) forControlEvents:UIControlEventTouchUpInside];
     
     
+    
 }
 
 #pragma mark - methods

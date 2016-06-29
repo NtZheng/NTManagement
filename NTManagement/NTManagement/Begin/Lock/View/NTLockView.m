@@ -7,7 +7,7 @@
 //
 
 #import "NTLockView.h"
-#import "NTLockViewUsedTime.h"
+#import "NTLockViewSingleton.h"
 
 @interface NTLockView ()
 
@@ -115,9 +115,7 @@ static const int widthAndHeight = 80;
     }
     [self.selectedItems removeAllObjects];
     [self setNeedsDisplay];
-    if ([NTLockViewUsedTime sharedLockViewUsedTime].usedTimes < 2) {
-        self.finishDrawPath(indexMutableArray);// 回调block
-    }
+    self.finishDrawPath(indexMutableArray);// 回调block
 }
 
 #pragma mark - 功能性的抽取方法
