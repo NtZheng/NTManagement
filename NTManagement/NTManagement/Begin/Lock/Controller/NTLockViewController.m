@@ -10,6 +10,7 @@
 #import "NTLockResultView.h"
 #import "NTLockView.h"
 #import "NTLockViewSingleton.h"
+#import "MBProgressHUD.h"
 
 @interface NTLockViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
@@ -35,7 +36,7 @@
     self.lockView.finishDrawPath = ^(NSMutableArray *indexMutableArray) {
         if (![NTLockViewSingleton sharedLockViewSingleton].isSecondDraw) {// 第一次绘制
             if (indexMutableArray.count < 3) {
-                NSLog(@"密码不能小于三位");
+                [self showCustomViewWithText:@"密码不能小于三位" image:@"close"];
             } else {
                 weakLockViewController.guideLabel.text = @"请再次绘制";
                 [weakLockViewController.lockResultView showResultLockView:indexMutableArray];
@@ -49,7 +50,7 @@
                 [self performSegueWithIdentifier:@"goIntoPrimary" sender:nil];
                 
             } else {
-                NSLog(@"不一样");
+                [self showCustomViewWithText:@"与第一次不符" image:@"close"];
             }
         }
     };
@@ -59,5 +60,21 @@
 #pragma mark - methods
 - (void)backAction {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+// 官方demo中的自定义提示的方法
+- (void)showCustomViewWithText :(NSString *)text image :(NSString *)imageName {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    // Set the custom view mode to show any view.
+    hud.mode = MBProgressHUDModeCustomView;
+    // Set an image view with a checkmark.
+    UIImage *image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    hud.customView = [[UIImageView alloc] initWithImage:image];
+    // Looks a bit nicer if we make it square.
+    hud.square = YES;
+    // Optional label text.
+    hud.labelText = text;
+    [hud hide:YES afterDelay:2.f];
 }
 @end
