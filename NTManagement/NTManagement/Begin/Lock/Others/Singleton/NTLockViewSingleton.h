@@ -12,7 +12,6 @@
 
 // 单例中的属性
 @property (nonatomic, assign) BOOL isSecondDraw;
-@property (nonatomic, strong) NSMutableArray *lockIndexMutableArray;
 
 + (instancetype)sharedLockViewSingleton;
 

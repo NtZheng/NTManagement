@@ -11,8 +11,10 @@
 #import "NTLockView.h"
 #import "NTLockViewSingleton.h"
 #import "MBProgressHUD.h"
+#import "PassWordTool.h"
 
 @interface NTLockViewController ()
+
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet NTLockResultView *lockResultView;
 @property (weak, nonatomic) IBOutlet NTLockView *lockView;
@@ -29,7 +31,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
     self.view.backgroundColor = [UIColor colorWithWhite:0.96 alpha:1.0];
     // 这里由于block中会用到self（即为本视图控制器，所以存在循环引用，则采取下面措施防止循环引用）
     __weak NTLockViewController *weakLockViewController = self;
@@ -45,22 +46,26 @@
             }
         } else {
             if ([indexMutableArray isEqualToArray:tempMutableArray]) {
-                [NTLockViewSingleton sharedLockViewSingleton].lockIndexMutableArray = tempMutableArray;// 将这个设备锁保存在单例中
+                // 保存在NSUserDefaults中（考虑到安全性不是特别重要，所以使用了NSUserDefault而不是Keychain）
+                [[NSUserDefaults standardUserDefaults] setObject:tempMutableArray forKey:@"lockPathArray"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                
                 // 手动跳转
                 [self performSegueWithIdentifier:@"goIntoPrimary" sender:nil];
                 
             } else {
+                
                 [self showCustomViewWithText:@"与第一次不符" image:@"close"];
             }
         }
     };
-    
 }
 
 #pragma mark - methods
-- (void)backAction {
+- (IBAction)backAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 
 // 官方demo中的自定义提示的方法
 - (void)showCustomViewWithText :(NSString *)text image :(NSString *)imageName {

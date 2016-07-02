@@ -35,9 +35,11 @@
     self.view.backgroundColor = [UIColor colorWithWhite:0.96 alpha:1.0];
     
     [self.forgetPasswordButton addTarget:self action:@selector(forgetPasswordAction) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"]) {
+        
+    } else {
+        [self performSegueWithIdentifier:@"goIntoLock" sender:nil];
+    }
 }
 
 #pragma mark - methods
@@ -49,6 +51,13 @@
 
 - (void)forgetPasswordAction {
     
+}
+
+- (IBAction)loginAction:(id)sender {
+    // 保存登录状态
+    [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"isLogin"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self performSegueWithIdentifier:@"goIntoLock" sender:nil];
 }
 
 - (void)timerAction {
