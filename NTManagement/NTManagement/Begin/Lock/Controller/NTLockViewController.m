@@ -51,7 +51,7 @@
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 
                 // 手动跳转
-                [self performSegueWithIdentifier:@"goIntoPrimary" sender:nil];
+                [self performSegueWithIdentifier:@"goIntoPrimaryFromLock" sender:nil];
                 
             } else {
                 
@@ -61,8 +61,17 @@
     };
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"]) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+}
+
 #pragma mark - methods
 - (IBAction)backAction:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isLogin"];
+//    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"lockPathArray"];此时是不可能存入数据的
     [self.navigationController popViewControllerAnimated:YES];
 }
 

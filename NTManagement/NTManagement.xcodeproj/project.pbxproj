@@ -18,6 +18,8 @@
 		6A666EFA1D1ADA0100F590C9 /* NTManagementUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A666EF91D1ADA0100F590C9 /* NTManagementUITests.m */; };
 		6A6ED42A1D276098003BF471 /* KeychainTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ED4271D276098003BF471 /* KeychainTool.m */; };
 		6A6ED42B1D276098003BF471 /* PassWordTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ED4291D276098003BF471 /* PassWordTool.m */; };
+		6A6ED4321D279B99003BF471 /* NTUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ED4311D279B99003BF471 /* NTUnlockViewController.m */; };
+		6A6ED4351D279D38003BF471 /* NTUnlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ED4341D279D38003BF471 /* NTUnlockView.m */; };
 		6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7105D81D201CA70012AA99 /* NTLoginViewController.m */; };
 		6A7E4E191D214184000E68C1 /* NTLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E4E181D214184000E68C1 /* NTLoginTableViewCell.m */; };
 		6AA7627B1D229E6400E93E50 /* NTLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA762781D229E6400E93E50 /* NTLockViewController.m */; };
@@ -70,6 +72,10 @@
 		6A6ED4271D276098003BF471 /* KeychainTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainTool.m; sourceTree = "<group>"; };
 		6A6ED4281D276098003BF471 /* PassWordTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassWordTool.h; sourceTree = "<group>"; };
 		6A6ED4291D276098003BF471 /* PassWordTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassWordTool.m; sourceTree = "<group>"; };
+		6A6ED4301D279B99003BF471 /* NTUnlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnlockViewController.h; sourceTree = "<group>"; };
+		6A6ED4311D279B99003BF471 /* NTUnlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnlockViewController.m; sourceTree = "<group>"; };
+		6A6ED4331D279D38003BF471 /* NTUnlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnlockView.h; sourceTree = "<group>"; };
+		6A6ED4341D279D38003BF471 /* NTUnlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnlockView.m; sourceTree = "<group>"; };
 		6A7105D71D201CA70012AA99 /* NTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLoginViewController.h; sourceTree = "<group>"; };
 		6A7105D81D201CA70012AA99 /* NTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLoginViewController.m; sourceTree = "<group>"; };
 		6A7E4E171D214184000E68C1 /* NTLoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLoginTableViewCell.h; sourceTree = "<group>"; };
@@ -228,6 +234,41 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		6A6ED42C1D279B23003BF471 /* Unlock */ = {
+			isa = PBXGroup;
+			children = (
+				6A6ED42E1D279B23003BF471 /* Model */,
+				6A6ED42F1D279B23003BF471 /* View */,
+				6A6ED42D1D279B23003BF471 /* Controller */,
+			);
+			path = Unlock;
+			sourceTree = "<group>";
+		};
+		6A6ED42D1D279B23003BF471 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A6ED4301D279B99003BF471 /* NTUnlockViewController.h */,
+				6A6ED4311D279B99003BF471 /* NTUnlockViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6A6ED42E1D279B23003BF471 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A6ED42F1D279B23003BF471 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A6ED4331D279D38003BF471 /* NTUnlockView.h */,
+				6A6ED4341D279D38003BF471 /* NTUnlockView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6A7105D61D201CA70012AA99 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,9 +308,9 @@
 		6A7F20901D24053D0032F60A /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				6A60FD531D26C59A002F9C88 /* Controller */,
 				6A60FD561D26C59A002F9C88 /* Model */,
 				6A60FD571D26C59A002F9C88 /* View */,
+				6A60FD531D26C59A002F9C88 /* Controller */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -388,6 +429,7 @@
 			children = (
 				6AB016EB1D1C254B00461757 /* Login */,
 				6AFF739F1D2255B9000DFBD0 /* Lock */,
+				6A6ED42C1D279B23003BF471 /* Unlock */,
 			);
 			path = Begin;
 			sourceTree = "<group>";
@@ -691,9 +733,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A6ED4321D279B99003BF471 /* NTUnlockViewController.m in Sources */,
 				6AA7628A1D22A27600E93E50 /* UIView+Extension.m in Sources */,
 				6AB824FB1D240DBB00B26D18 /* NTLockViewSingleton.m in Sources */,
 				6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */,
+				6A6ED4351D279D38003BF471 /* NTUnlockView.m in Sources */,
 				6AA7628B1D22A27600E93E50 /* AppDelegate.m in Sources */,
 				6AA762891D22A27600E93E50 /* UIButton+Extension.m in Sources */,
 				6AE4B8141D23C904005C9BD8 /* NTLockResultView.m in Sources */,

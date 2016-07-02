@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDF-Ib-ITB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1193.5" y="-345.5"/>
+            <point key="canvasLocation" x="-1281.5" y="-11.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="wxL-0h-pqg">
@@ -99,11 +99,12 @@
                         <outlet property="loginButton" destination="hUl-L0-SYX" id="JZH-Tp-GvX"/>
                         <outlet property="myTableView" destination="Tde-oy-g90" id="gcB-Qg-Rpi"/>
                         <segue destination="AZc-44-fDh" kind="show" identifier="goIntoLock" id="ChD-qo-0am"/>
+                        <segue destination="nfk-qr-qTg" kind="show" identifier="goIntoUnlock" id="7c4-OH-5Qj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKx-C0-rhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-763.5" y="-345.5"/>
+            <point key="canvasLocation" x="-879.5" y="-11.5"/>
         </scene>
         <!--手势密码-->
         <scene sceneID="YkK-UJ-4A2">
@@ -152,12 +153,47 @@
                         <outlet property="guideLabel" destination="7Ha-6v-r6v" id="t4x-we-I2B"/>
                         <outlet property="lockResultView" destination="NeT-Jr-llw" id="sTo-PC-SlX"/>
                         <outlet property="lockView" destination="Zjg-V3-tec" id="ln6-In-9gO"/>
-                        <segue destination="ony-Eh-A4E" kind="showDetail" identifier="goIntoPrimary" id="sSQ-1U-VN2"/>
+                        <segue destination="ony-Eh-A4E" kind="showDetail" identifier="goIntoPrimaryFromLock" id="sSQ-1U-VN2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3w-Jj-gNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-361.5" y="-345.5"/>
+        </scene>
+        <!--Unlock View Controller-->
+        <scene sceneID="Wbn-xI-IZO">
+            <objects>
+                <viewController id="nfk-qr-qTg" customClass="NTUnlockViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CN9-aH-Kdy"/>
+                        <viewControllerLayoutGuide type="bottom" id="hOc-gC-ut8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fkX-Aw-D6B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="请输入解锁手势" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dP-Uh-5Yu">
+                                <rect key="frame" x="128" y="155" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XA9-fi-w1t" customClass="NTUnlockView">
+                                <rect key="frame" x="52" y="254" width="270" height="270"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="unlockView" destination="XA9-fi-w1t" id="hPF-NP-h9s"/>
+                        <segue destination="ony-Eh-A4E" kind="showDetail" identifier="goIntoPrimaryFromUnlock" id="55i-2r-YpE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdj-LW-fRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-361.5" y="398.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i72-cz-zbj">
@@ -177,7 +213,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tju-Ps-vDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68.5" y="-345.5"/>
+            <point key="canvasLocation" x="164.5" y="-11.5"/>
         </scene>
         <!--未读文件-->
         <scene sceneID="D2t-QZ-QkZ">
@@ -207,7 +243,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIo-v6-VMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200.5" y="-1077.5"/>
+            <point key="canvasLocation" x="1192.5" y="-761.5"/>
         </scene>
         <!--未读文件-->
         <scene sceneID="Nfu-7h-S34">
@@ -226,7 +262,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mv-iw-Vi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764.5" y="-1077.5"/>
+            <point key="canvasLocation" x="756.5" y="-761.5"/>
         </scene>
         <!--已读文件-->
         <scene sceneID="Bvf-JW-bhl">
@@ -255,7 +291,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7v-sj-TbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200.5" y="-345.5"/>
+            <point key="canvasLocation" x="1200.5" y="-25.5"/>
         </scene>
         <!--已读文件-->
         <scene sceneID="qZa-mc-2Ne">
@@ -274,7 +310,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1z-c7-97R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764.5" y="-345.5"/>
+            <point key="canvasLocation" x="764.5" y="-25.5"/>
         </scene>
         <!--个人-->
         <scene sceneID="ud6-dZ-bSc">
@@ -297,7 +333,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOb-aw-QRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1195.5" y="396.5"/>
+            <point key="canvasLocation" x="1187.5" y="836.5"/>
         </scene>
         <!--设置-->
         <scene sceneID="F4S-ho-6Or">
@@ -328,7 +364,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWD-7a-iJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1614.5" y="396.5"/>
+            <point key="canvasLocation" x="1606.5" y="836.5"/>
         </scene>
         <!--个人-->
         <scene sceneID="t2b-Pi-FVL">
@@ -347,7 +383,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AfA-cy-9WW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764.5" y="396.5"/>
+            <point key="canvasLocation" x="756.5" y="836.5"/>
         </scene>
     </scenes>
     <resources>
@@ -359,4 +395,7 @@
         <image name="unreaded_normal" width="37" height="37"/>
         <image name="unreaded_selected" width="37" height="37"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="55i-2r-YpE"/>
+    </inferredMetricsTieBreakers>
 </document>
