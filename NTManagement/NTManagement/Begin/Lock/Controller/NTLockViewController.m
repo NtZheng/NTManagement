@@ -71,7 +71,7 @@
 #pragma mark - methods
 - (IBAction)backAction:(id)sender {
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isLogin"];
-//    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"lockPathArray"];此时是不可能存入数据的
+    [NTLockViewSingleton sharedLockViewSingleton].isSecondDraw = NO;
     [self.navigationController popViewControllerAnimated:YES];
 }
 

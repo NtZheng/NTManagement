@@ -8,6 +8,7 @@
 
 #import "NTSettingTableViewController.h"
 #import "PassWordTool.h"
+#import "NTLockViewSingleton.h"
 
 @interface NTSettingTableViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
@@ -59,6 +60,7 @@
     } else {
         [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"isLogin"];// 改变登录状态
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"lockPathArray"];// 消除设置的手势解锁
+        [NTLockViewSingleton sharedLockViewSingleton].isSecondDraw = NO;
         [self dismissViewControllerAnimated:YES completion:^{
             
         }];
