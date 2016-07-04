@@ -31,7 +31,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     if (indexPath.section == 0) {
-        cell.textLabel.text = @"清除缓存";
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"清除缓存";
+        } else {
+            cell.textLabel.text = @"重新绘制手势";
+        }
     } else {
         cell.textLabel.text = @"退出登录";
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
@@ -45,7 +49,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    if (section == 0) {
+        return 2;
+    } else {
+        return 1;
+    }
 }
 
 #pragma mark - delegate
