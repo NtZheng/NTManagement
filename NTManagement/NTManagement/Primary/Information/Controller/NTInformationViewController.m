@@ -11,33 +11,19 @@
 @interface NTInformationViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
-@property (nonatomic, strong) UIImageView *myImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *myImageView;
 
 @end
 
 @implementation NTInformationViewController
 
 const static int imageViewHeight = 100;
-const static int imageViewOffsetY = -110;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
-    self.myTableView.contentInset = UIEdgeInsetsMake(imageViewHeight, 0, 0, 0);// 让cell向下移动100
-    [self.myTableView sendSubviewToBack:self.myImageView];// 添加到最后
-}
-
-
-#pragma mark - 懒加载
-- (UIImageView *)myImageView {
-    if (_myImageView == nil) {
-        _myImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, imageViewOffsetY, NTScreenWidth, imageViewHeight)];
-        _myImageView.image = [UIImage imageNamed:@"阿狸"];
-        _myImageView.contentMode = UIViewContentModeScaleAspectFill;// 使用这个模式，放大的时候就会从中间进行放大
-        [self.myTableView addSubview:_myImageView];
-    }
-    return _myImageView;
+    self.myTableView.contentInset = UIEdgeInsetsMake(imageViewHeight, 0, 0, 0);// 让UITableView的内容向下偏移imageViewHeight这么多距离，空出来用于背景显示
 }
 
 #pragma mark - dataSource
@@ -66,11 +52,9 @@ const static int imageViewOffsetY = -110;
     return 0.02;
 }
 
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 50;
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
@@ -80,15 +64,11 @@ const static int imageViewOffsetY = -110;
 
 // 制作拉伸效果主要的方法
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat offsetY = scrollView.contentOffset.y;
-    CGFloat offsetH = imageViewHeight + offsetY;
-    if (offsetH < 0) { //向下拉动的时候调用
-        if (offsetH > -25) {// 当0到-25这个时段，不进行拉伸效果
-            
-        } else {// 如果图片未显示完全，就继续显示，如果显示完全，就进行拉伸
-            self.myImageView.height = imageViewHeight - offsetH;// 将高度调高
-            self.myImageView.y = imageViewOffsetY + 10 + offsetH;// 下边界是一定的，高度变大了，起始的Y应该上移
-        }
+    CGFloat offsetY = scrollView.contentOffset.y;// UIScrollView（也就是这里的UITableView）在y方向上的偏移量
+    CGFloat offsetH = imageViewHeight + offsetY;// 实际上UITableView向下拖动的距离（也就是UIImageView需要添加的高度）
+    if (offsetH < 0) {// 向下拉动的时候调用
+        self.myImageView.height = imageViewHeight - offsetH;// 改变UIImageView的高度（重点：由于我们设置的UIImageView的模式为Aspect Fill，所以系统会这样做->当还没有完全显示UIImageView的时候进行显示，这种显示效果就是UITableView的内容的变化速度看起来比UIImageView的变化速度要快，这是系统的效果，不需要我们实现，接着，当显示完全的时候，那么就按照Aspect Fill这种效果去拉伸图片）
     }
 }
+
 @end
