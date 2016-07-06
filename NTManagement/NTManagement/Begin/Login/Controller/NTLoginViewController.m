@@ -95,7 +95,7 @@
         tempButton = cell.myButton;
     } else {
         cell.myImageView.image = [UIImage imageNamed:@"password.png"];
-        cell.myTextField.placeholder = @"请输入密码";
+        cell.myTextField.placeholder = @"请输入验证码";
         cell.myTextField.secureTextEntry = YES;
         [cell.myButton removeFromSuperview];
     }

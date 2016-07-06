@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		032DFAC9490B9929C30EAE31 /* libPods-NTManagementTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C9C52DBF228F7EC1420CC0 /* libPods-NTManagementTests.a */; };
 		29AC40C8EE94B67BB9721113 /* libPods-NTManagement.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB7B8913F66E4C8E6743EC7 /* libPods-NTManagement.a */; };
+		6A59B1811D2CAC940083DF1E /* NTUnreadedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A59B1801D2CAC940083DF1E /* NTUnreadedTableViewController.m */; };
+		6A59B1841D2CAD7D0083DF1E /* NTUnreadedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A59B1831D2CAD7D0083DF1E /* NTUnreadedTableViewCell.m */; };
 		6A60FD5B1D26C5A9002F9C88 /* NTSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60FD5A1D26C5A9002F9C88 /* NTSettingTableViewController.m */; };
 		6A666EDF1D1ADA0000F590C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A666EDD1D1ADA0000F590C9 /* Main.storyboard */; };
 		6A666EE11D1ADA0100F590C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A666EE01D1ADA0100F590C9 /* Assets.xcassets */; };
@@ -54,6 +56,10 @@
 /* Begin PBXFileReference section */
 		1D37ECAD778D6158FAC1D5D8 /* Pods-NTManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NTManagement/Pods-NTManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		44C9C52DBF228F7EC1420CC0 /* libPods-NTManagementTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTManagementTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A59B17F1D2CAC940083DF1E /* NTUnreadedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnreadedTableViewController.h; sourceTree = "<group>"; };
+		6A59B1801D2CAC940083DF1E /* NTUnreadedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnreadedTableViewController.m; sourceTree = "<group>"; };
+		6A59B1821D2CAD7D0083DF1E /* NTUnreadedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnreadedTableViewCell.h; sourceTree = "<group>"; };
+		6A59B1831D2CAD7D0083DF1E /* NTUnreadedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnreadedTableViewCell.m; sourceTree = "<group>"; };
 		6A60FD591D26C5A9002F9C88 /* NTSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSettingTableViewController.h; sourceTree = "<group>"; };
 		6A60FD5A1D26C5A9002F9C88 /* NTSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSettingTableViewController.m; sourceTree = "<group>"; };
 		6A666ED11D1ADA0000F590C9 /* NTManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A48AF0B1D2CAC6C00F265F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A59B17F1D2CAC940083DF1E /* NTUnreadedTableViewController.h */,
+				6A59B1801D2CAC940083DF1E /* NTUnreadedTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6A48AF0C1D2CAC6C00F265F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A48AF0D1D2CAC6C00F265F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A59B1821D2CAD7D0083DF1E /* NTUnreadedTableViewCell.h */,
+				6A59B1831D2CAD7D0083DF1E /* NTUnreadedTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6A60FD531D26C59A002F9C88 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +365,9 @@
 		6A7F20931D24053D0032F60A /* Unreaded */ = {
 			isa = PBXGroup;
 			children = (
+				6A48AF0B1D2CAC6C00F265F1 /* Controller */,
+				6A48AF0C1D2CAC6C00F265F1 /* Model */,
+				6A48AF0D1D2CAC6C00F265F1 /* View */,
 			);
 			path = Unreaded;
 			sourceTree = "<group>";
@@ -736,12 +770,14 @@
 				6A6ED4321D279B99003BF471 /* NTUnlockViewController.m in Sources */,
 				6AA7628A1D22A27600E93E50 /* UIView+Extension.m in Sources */,
 				6AB824FB1D240DBB00B26D18 /* NTLockViewSingleton.m in Sources */,
+				6A59B1811D2CAC940083DF1E /* NTUnreadedTableViewController.m in Sources */,
 				6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */,
 				6A6ED4351D279D38003BF471 /* NTUnlockView.m in Sources */,
 				6AA7628B1D22A27600E93E50 /* AppDelegate.m in Sources */,
 				6AA762891D22A27600E93E50 /* UIButton+Extension.m in Sources */,
 				6ADB7D811D2A9DEF006BAFEA /* NTInformationViewController.m in Sources */,
 				6AE4B8141D23C904005C9BD8 /* NTLockResultView.m in Sources */,
+				6A59B1841D2CAD7D0083DF1E /* NTUnreadedTableViewCell.m in Sources */,
 				6AA7627B1D229E6400E93E50 /* NTLockViewController.m in Sources */,
 				6AA7628E1D22A38800E93E50 /* NTLockView.m in Sources */,
 				6AA7628C1D22A27600E93E50 /* main.m in Sources */,
