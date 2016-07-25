@@ -66,7 +66,7 @@ const static int imageViewHeight = 100;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offsetY = scrollView.contentOffset.y;// UIScrollView（也就是这里的UITableView）在y方向上的偏移量
     CGFloat offsetH = imageViewHeight + offsetY;// 实际上UITableView向下拖动的距离（也就是UIImageView需要添加的高度）
-    if (offsetH < 0) {// 向下拉动的时候调用
+    if (offsetH < imageViewHeight) {// 向下拉动的时候调用
         self.myImageView.height = imageViewHeight - offsetH;// 改变UIImageView的高度（重点：由于我们设置的UIImageView的模式为Aspect Fill，所以系统会这样做->当还没有完全显示UIImageView的时候进行显示，这种显示效果就是UITableView的内容的变化速度看起来比UIImageView的变化速度要快，这是系统的效果，不需要我们实现，接着，当显示完全的时候，那么就按照Aspect Fill这种效果去拉伸图片）
     }
 }
