@@ -12,6 +12,7 @@
 @interface NTFlowViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *myTableView;
+@property (nonatomic, strong) UIButton *backButton;
 
 @end
 
@@ -21,6 +22,7 @@
     [super viewDidLoad];
     [self.view addSubview:self.myTableView];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backButton];
 }
 
 #pragma mark - 懒加载
@@ -32,6 +34,17 @@
     }
     return _myTableView;
 }
+
+- (UIButton *)backButton {
+    if (_backButton == nil) {
+        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _backButton.size = CGSizeMake(30, 30);
+        [_backButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        [_backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _backButton;
+}
+
 
 #pragma mark - dataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,7 +66,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 140;
+    return 150;
 }
 
+#pragma mark - methods
+- (void)backAction {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

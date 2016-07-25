@@ -8,14 +8,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="141" id="KGk-i7-Jjw" customClass="NTNormalFlowTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="536" height="141"/>
+            <rect key="frame" x="0.0" y="0.0" width="536" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="536" height="140"/>
+                <rect key="frame" x="0.0" y="0.0" width="536" height="149"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykL-72-25i">
-                        <rect key="frame" x="60" y="0.0" width="2" height="140"/>
+                        <rect key="frame" x="60" y="0.0" width="2" height="149"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="2" id="cDF-Ol-6mL"/>
@@ -29,20 +29,65 @@
                             <constraint firstAttribute="height" constant="16" id="cQU-MM-3Z2"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="郑经理" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkO-TG-5Cg">
+                        <rect key="frame" x="132" y="31" width="200" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="1QZ-EI-3dE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dismiss" translatesAutoresizingMaskIntoConstraints="NO" id="BP3-Ro-E86">
+                        <rect key="frame" x="436" y="50" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="gP7-xz-TYc"/>
+                            <constraint firstAttribute="width" constant="50" id="rAh-AV-bKw"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016年7月25日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INL-3u-vp1">
+                        <rect key="frame" x="132" y="82" width="200" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="Fa3-SD-i9y"/>
+                            <constraint firstAttribute="width" constant="200" id="Lm3-JQ-Knt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ptq-ug-HtF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="53" id="1WB-OU-DLk"/>
+                    <constraint firstAttribute="bottom" secondItem="INL-3u-vp1" secondAttribute="bottom" constant="31" id="1ax-Ib-99y"/>
+                    <constraint firstItem="BP3-Ro-E86" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="4kZ-0R-4bD"/>
                     <constraint firstItem="ykL-72-25i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="Ls2-5g-Vx9"/>
+                    <constraint firstAttribute="bottom" secondItem="OkO-TG-5Cg" secondAttribute="bottom" constant="73" id="RUT-Bh-sxR"/>
+                    <constraint firstItem="OkO-TG-5Cg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="TzE-rF-ZwM"/>
                     <constraint firstItem="ykL-72-25i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="VRZ-SW-SSu"/>
+                    <constraint firstItem="INL-3u-vp1" firstAttribute="top" secondItem="OkO-TG-5Cg" secondAttribute="bottom" constant="6" id="WY8-At-aRp"/>
+                    <constraint firstAttribute="trailing" secondItem="BP3-Ro-E86" secondAttribute="trailing" constant="50" id="b0M-wN-wHp"/>
                     <constraint firstItem="ptq-ug-HtF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="bJl-QJ-4Mu"/>
+                    <constraint firstItem="OkO-TG-5Cg" firstAttribute="leading" secondItem="ptq-ug-HtF" secondAttribute="trailing" constant="30" id="fiZ-nw-epR"/>
+                    <constraint firstItem="INL-3u-vp1" firstAttribute="leading" secondItem="ykL-72-25i" secondAttribute="trailing" constant="70" id="iS6-hH-1BE"/>
+                    <constraint firstItem="OkO-TG-5Cg" firstAttribute="leading" secondItem="ykL-72-25i" secondAttribute="trailing" constant="70" id="kb0-a4-uHR"/>
                     <constraint firstAttribute="bottom" secondItem="ykL-72-25i" secondAttribute="bottom" id="osi-Sb-u8K"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="fiZ-nw-epR"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="circleView" destination="ptq-ug-HtF" id="cuO-Ib-fdN"/>
+                <outlet property="dateLabel" destination="INL-3u-vp1" id="94H-m7-dX3"/>
+                <outlet property="nameLabel" destination="OkO-TG-5Cg" id="TQO-1N-81Z"/>
                 <outlet property="segmentLine" destination="ykL-72-25i" id="0rM-xh-APK"/>
             </connections>
             <point key="canvasLocation" x="126" y="314.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="dismiss" width="200" height="200"/>
+    </resources>
 </document>
