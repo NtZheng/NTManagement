@@ -55,10 +55,10 @@
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="loginCell" id="nDb-oH-yuB" customClass="NTLoginTableViewCell">
-                                        <rect key="frame" x="0.0" y="49.5" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDb-oH-yuB" id="TXk-pn-CjA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkT-df-0bn">
@@ -225,10 +225,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="unreadedCell" rowHeight="100" id="xbt-Fa-Lld" customClass="NTUnreadedTableViewCell">
-                                <rect key="frame" x="0.0" y="113.5" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xbt-Fa-Lld" id="Wl2-1l-qC1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6j-c6-RJc">
@@ -241,7 +241,7 @@
                                             <rect key="frame" x="8" y="9" width="80" height="80"/>
                                         </imageView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="地沟油扩张计划...本项目需要投入大量的资金进行开发，因为其中存在了很大的商机，我们公司将要投入很多的人力和物理以及财力进行开发" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JSZ-ex-FUS">
-                                            <rect key="frame" x="96" y="8" width="186" height="116.5"/>
+                                            <rect key="frame" x="96" y="8" width="186" height="117"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -261,10 +261,32 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="未读文件" id="AMs-oc-wnS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="VkZ-1x-TyP" kind="show" identifier="goIntoFlowViewController" id="BM7-j5-9X4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIo-v6-VMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1192.5" y="-761.5"/>
+        </scene>
+        <!--Flow View Controller-->
+        <scene sceneID="hnj-MQ-eXc">
+            <objects>
+                <viewController id="VkZ-1x-TyP" customClass="NTFlowViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PhO-pl-u5d"/>
+                        <viewControllerLayoutGuide type="bottom" id="gG4-v3-Pna"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JKo-me-c2Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EtN-OR-fsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1655.5" y="-761.5"/>
         </scene>
         <!--未读文件-->
         <scene sceneID="Nfu-7h-S34">
@@ -298,7 +320,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t3J-bz-CtP" id="1Xt-gy-kvf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -312,7 +334,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7v-sj-TbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200.5" y="-25.5"/>
+            <point key="canvasLocation" x="1192.5" y="-3.5"/>
         </scene>
         <!--已读文件-->
         <scene sceneID="qZa-mc-2Ne">
@@ -331,7 +353,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1z-c7-97R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764.5" y="-25.5"/>
+            <point key="canvasLocation" x="756.5" y="-3.5"/>
         </scene>
         <!--个人信息-->
         <scene sceneID="95m-2I-1a3">
@@ -365,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OrQ-Gy-rdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192.5" y="836.5"/>
+            <point key="canvasLocation" x="1199.5" y="778.5"/>
         </scene>
         <!--设置-->
         <scene sceneID="F4S-ho-6Or">
@@ -396,7 +418,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWD-7a-iJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630.5" y="836.5"/>
+            <point key="canvasLocation" x="1637.5" y="778.5"/>
         </scene>
         <!--个人-->
         <scene sceneID="t2b-Pi-FVL">
@@ -415,7 +437,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AfA-cy-9WW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756.5" y="836.5"/>
+            <point key="canvasLocation" x="763.5" y="778.5"/>
         </scene>
     </scenes>
     <resources>
