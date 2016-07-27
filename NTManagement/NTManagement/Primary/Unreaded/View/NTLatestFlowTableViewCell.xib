@@ -37,13 +37,6 @@
                             <constraint firstAttribute="width" constant="2" id="xlZ-GT-gcm"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dismiss" translatesAutoresizingMaskIntoConstraints="NO" id="51R-Ki-nmx">
-                        <rect key="frame" x="436" y="50" width="50" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="50" id="Cbq-1w-kzY"/>
-                            <constraint firstAttribute="width" constant="50" id="G2U-7J-8vO"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016年7月25日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9G-Dc-9O5">
                         <rect key="frame" x="132" y="82" width="200" height="36"/>
                         <constraints>
@@ -63,6 +56,13 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="noCheck" translatesAutoresizingMaskIntoConstraints="NO" id="51R-Ki-nmx">
+                        <rect key="frame" x="427" y="50" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Cbq-1w-kzY"/>
+                            <constraint firstAttribute="width" constant="50" id="G2U-7J-8vO"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Isa-9H-XZ0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="00A-sQ-1XS"/>
@@ -76,7 +76,7 @@
                     <constraint firstItem="51R-Ki-nmx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="X94-pm-DHO"/>
                     <constraint firstItem="b9G-Dc-9O5" firstAttribute="top" secondItem="uTL-ZU-f6M" secondAttribute="bottom" constant="73" id="gG0-vJ-BlI"/>
                     <constraint firstItem="6iY-pu-sTA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="51" id="h7x-bf-aMA"/>
-                    <constraint firstAttribute="trailing" secondItem="51R-Ki-nmx" secondAttribute="trailing" constant="50" id="j8G-By-JBv"/>
+                    <constraint firstAttribute="trailing" secondItem="51R-Ki-nmx" secondAttribute="trailing" constant="55" id="j8G-By-JBv"/>
                     <constraint firstItem="eHC-lL-u9V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="kFS-di-vef"/>
                     <constraint firstItem="b9G-Dc-9O5" firstAttribute="top" secondItem="uTL-ZU-f6M" secondAttribute="bottom" constant="6" id="mFi-rO-GCa"/>
                     <constraint firstAttribute="bottom" secondItem="b9G-Dc-9O5" secondAttribute="bottom" constant="31" id="pb2-ya-aIh"/>
@@ -100,6 +100,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dismiss" width="200" height="200"/>
+        <image name="noCheck" width="89" height="89"/>
     </resources>
 </document>

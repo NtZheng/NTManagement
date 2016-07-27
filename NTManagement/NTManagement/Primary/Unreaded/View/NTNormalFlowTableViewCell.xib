@@ -29,13 +29,6 @@
                             <constraint firstAttribute="height" constant="16" id="cQU-MM-3Z2"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dismiss" translatesAutoresizingMaskIntoConstraints="NO" id="BP3-Ro-E86">
-                        <rect key="frame" x="436" y="50" width="50" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="50" id="gP7-xz-TYc"/>
-                            <constraint firstAttribute="width" constant="50" id="rAh-AV-bKw"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016年7月25日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INL-3u-vp1">
                         <rect key="frame" x="132" y="82" width="200" height="36"/>
                         <constraints>
@@ -55,6 +48,13 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="doCheck" translatesAutoresizingMaskIntoConstraints="NO" id="BP3-Ro-E86">
+                        <rect key="frame" x="432" y="50" width="55" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="gP7-xz-TYc"/>
+                            <constraint firstAttribute="width" constant="55" id="rAh-AV-bKw"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ptq-ug-HtF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="53" id="1WB-OU-DLk"/>
@@ -88,6 +88,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dismiss" width="200" height="200"/>
+        <image name="doCheck" width="102" height="91"/>
     </resources>
 </document>
