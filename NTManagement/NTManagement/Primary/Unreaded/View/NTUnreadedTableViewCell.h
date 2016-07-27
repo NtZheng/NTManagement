@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface NTUnreadedTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UITextView *nameTextView;
+@property (weak, nonatomic) IBOutlet UIImageView *fileImageView;
+
 
 @end

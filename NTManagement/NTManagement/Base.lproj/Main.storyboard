@@ -241,7 +241,7 @@
                                             <rect key="frame" x="8" y="9" width="80" height="80"/>
                                         </imageView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="地沟油扩张计划...本项目需要投入大量的资金进行开发，因为其中存在了很大的商机，我们公司将要投入很多的人力和物理以及财力进行开发" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JSZ-ex-FUS">
-                                            <rect key="frame" x="96" y="8" width="186" height="117"/>
+                                            <rect key="frame" x="94" y="8" width="186" height="83"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -249,6 +249,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="fileImageView" destination="SIh-NO-MlB" id="plK-kt-8nV"/>
                                     <outlet property="nameTextView" destination="JSZ-ex-FUS" id="DfD-3E-IcQ"/>
                                     <outlet property="timeLabel" destination="g6j-c6-RJc" id="0CM-oR-Quw"/>
                                 </connections>

@@ -85,9 +85,9 @@
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
+                        <exclude reference="WkX-Pd-GH2"/>
                         <exclude reference="gG0-vJ-BlI"/>
                         <exclude reference="mFi-rO-GCa"/>
-                        <exclude reference="WkX-Pd-GH2"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>

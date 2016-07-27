@@ -22,14 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.myTableView];
-    self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backButton];
 }
 
 #pragma mark - 懒加载
 - (UITableView *)myTableView {
     if (_myTableView == nil) {
-        _myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 200, NTScreenWidth, NTScreenHeight) style:UITableViewStyleGrouped];
+        _myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, NTScreenWidth, NTScreenHeight) style:UITableViewStyleGrouped];
         _myTableView.delegate = self;
         _myTableView.dataSource = self;
     }
@@ -71,6 +70,10 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0.02;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0.02;
 }
 
