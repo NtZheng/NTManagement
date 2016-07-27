@@ -14,8 +14,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="536" height="149"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iY-pu-sTA">
-                        <rect key="frame" x="51" y="30" width="20" height="20"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHC-lL-u9V">
+                        <rect key="frame" x="47" y="26" width="28" height="28"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="UBk-mg-rV4"/>
+                            <constraint firstAttribute="width" constant="28" id="eG4-ZM-SKj"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6iY-pu-sTA">
+                        <rect key="frame" x="51" y="31" width="20" height="20"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="AdL-IC-iAd"/>
@@ -63,10 +71,13 @@
                     <constraint firstItem="uTL-ZU-f6M" firstAttribute="leading" secondItem="Isa-9H-XZ0" secondAttribute="trailing" constant="70" id="Jzx-PT-GFj"/>
                     <constraint firstAttribute="bottom" secondItem="Isa-9H-XZ0" secondAttribute="bottom" id="MOj-Rg-PBL"/>
                     <constraint firstItem="uTL-ZU-f6M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="P3L-kE-kvo"/>
+                    <constraint firstItem="eHC-lL-u9V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="47" id="Vrd-nd-WEX"/>
+                    <constraint firstItem="eHC-lL-u9V" firstAttribute="leading" secondItem="Isa-9H-XZ0" secondAttribute="trailing" constant="49" id="WkX-Pd-GH2"/>
                     <constraint firstItem="51R-Ki-nmx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="X94-pm-DHO"/>
                     <constraint firstItem="b9G-Dc-9O5" firstAttribute="top" secondItem="uTL-ZU-f6M" secondAttribute="bottom" constant="73" id="gG0-vJ-BlI"/>
                     <constraint firstItem="6iY-pu-sTA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="51" id="h7x-bf-aMA"/>
                     <constraint firstAttribute="trailing" secondItem="51R-Ki-nmx" secondAttribute="trailing" constant="50" id="j8G-By-JBv"/>
+                    <constraint firstItem="eHC-lL-u9V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="kFS-di-vef"/>
                     <constraint firstItem="b9G-Dc-9O5" firstAttribute="top" secondItem="uTL-ZU-f6M" secondAttribute="bottom" constant="6" id="mFi-rO-GCa"/>
                     <constraint firstAttribute="bottom" secondItem="b9G-Dc-9O5" secondAttribute="bottom" constant="31" id="pb2-ya-aIh"/>
                     <constraint firstItem="b9G-Dc-9O5" firstAttribute="leading" secondItem="Isa-9H-XZ0" secondAttribute="trailing" constant="70" id="r2G-Rv-CTd"/>
@@ -76,11 +87,13 @@
                     <mask key="constraints">
                         <exclude reference="gG0-vJ-BlI"/>
                         <exclude reference="mFi-rO-GCa"/>
+                        <exclude reference="WkX-Pd-GH2"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="circleView" destination="6iY-pu-sTA" id="vdh-08-9tG"/>
+                <outlet property="outerCircleView" destination="eHC-lL-u9V" id="vWy-HN-qnd"/>
                 <outlet property="segmentLine" destination="Isa-9H-XZ0" id="ojd-aV-4PL"/>
             </connections>
             <point key="canvasLocation" x="443" y="358"/>
