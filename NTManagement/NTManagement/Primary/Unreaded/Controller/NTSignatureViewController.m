@@ -7,11 +7,12 @@
 //
 
 #import "NTSignatureViewController.h"
+#import "NTPlaceholderTextView.h"
 
 @interface NTSignatureViewController ()
 
 @property (nonatomic, strong) UIButton *backButton;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet NTPlaceholderTextView *textView;
 @property (weak, nonatomic) IBOutlet UIButton *finishButton;
 
 @end
@@ -21,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backButton];
+    self.textView.placeholder = @"请您在这里填写对于本文件的意见";
 }
 
 #pragma mark - 懒加载

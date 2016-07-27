@@ -326,7 +326,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请您在这里填写对于本文件的意见..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h3C-tl-Bts">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h3C-tl-Bts" customClass="NTPlaceholderTextView">
                                 <rect key="frame" x="20" y="125" width="335" height="250"/>
                                 <color key="backgroundColor" white="0.8985721982758621" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -356,7 +356,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="finishButton" destination="2dC-aW-wh6" id="9aL-nM-eFZ"/>
-                        <outlet property="textView" destination="h3C-tl-Bts" id="Jxn-g3-23L"/>
+                        <outlet property="textView" destination="h3C-tl-Bts" id="v6x-iS-XGE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmq-7d-GVM" userLabel="First Responder" sceneMemberID="firstResponder"/>

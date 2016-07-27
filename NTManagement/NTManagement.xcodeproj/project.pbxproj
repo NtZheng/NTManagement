@@ -11,6 +11,7 @@
 		29AC40C8EE94B67BB9721113 /* libPods-NTManagement.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB7B8913F66E4C8E6743EC7 /* libPods-NTManagement.a */; };
 		6A19DEB71D4897840074A7DB /* NTUnreadedDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A19DEB61D4897840074A7DB /* NTUnreadedDetailsViewController.m */; };
 		6A19DEBA1D48A5C80074A7DB /* NTSignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A19DEB91D48A5C80074A7DB /* NTSignatureViewController.m */; };
+		6A3B03361D48CE2A00355C98 /* NTPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B03351D48CE2A00355C98 /* NTPlaceholderTextView.m */; };
 		6A59B1811D2CAC940083DF1E /* NTUnreadedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A59B1801D2CAC940083DF1E /* NTUnreadedTableViewController.m */; };
 		6A59B1841D2CAD7D0083DF1E /* NTUnreadedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A59B1831D2CAD7D0083DF1E /* NTUnreadedTableViewCell.m */; };
 		6A60FD5B1D26C5A9002F9C88 /* NTSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60FD5A1D26C5A9002F9C88 /* NTSettingTableViewController.m */; };
@@ -67,6 +68,8 @@
 		6A19DEB61D4897840074A7DB /* NTUnreadedDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnreadedDetailsViewController.m; sourceTree = "<group>"; };
 		6A19DEB81D48A5C80074A7DB /* NTSignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSignatureViewController.h; sourceTree = "<group>"; };
 		6A19DEB91D48A5C80074A7DB /* NTSignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSignatureViewController.m; sourceTree = "<group>"; };
+		6A3B03341D48CE2A00355C98 /* NTPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTPlaceholderTextView.h; sourceTree = "<group>"; };
+		6A3B03351D48CE2A00355C98 /* NTPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTPlaceholderTextView.m; sourceTree = "<group>"; };
 		6A59B17F1D2CAC940083DF1E /* NTUnreadedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnreadedTableViewController.h; sourceTree = "<group>"; };
 		6A59B1801D2CAC940083DF1E /* NTUnreadedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnreadedTableViewController.m; sourceTree = "<group>"; };
 		6A59B1821D2CAD7D0083DF1E /* NTUnreadedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnreadedTableViewCell.h; sourceTree = "<group>"; };
@@ -161,6 +164,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A3B03331D48CDFA00355C98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A3B03341D48CE2A00355C98 /* NTPlaceholderTextView.h */,
+				6A3B03351D48CE2A00355C98 /* NTPlaceholderTextView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6A48AF0B1D2CAC6C00F265F1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +502,7 @@
 		6AEC8A831D1C172D00648C3F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				6A3B03331D48CDFA00355C98 /* View */,
 				6A6ED4251D27607E003BF471 /* Tools */,
 				6AA762841D22A27600E93E50 /* Others */,
 				6AA7627F1D22A27600E93E50 /* Category */,
@@ -823,6 +836,7 @@
 				6AA066DA1D48708300D253D1 /* NTLatestFlowTableViewCell.m in Sources */,
 				6AA7628E1D22A38800E93E50 /* NTLockView.m in Sources */,
 				6AA7628C1D22A27600E93E50 /* main.m in Sources */,
+				6A3B03361D48CE2A00355C98 /* NTPlaceholderTextView.m in Sources */,
 				6A6ED42B1D276098003BF471 /* PassWordTool.m in Sources */,
 				6A60FD5B1D26C5A9002F9C88 /* NTSettingTableViewController.m in Sources */,
 				6A19DEBA1D48A5C80074A7DB /* NTSignatureViewController.m in Sources */,
