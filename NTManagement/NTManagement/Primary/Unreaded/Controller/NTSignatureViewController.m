@@ -9,7 +9,7 @@
 #import "NTSignatureViewController.h"
 #import "NTPlaceholderTextView.h"
 
-@interface NTSignatureViewController ()
+@interface NTSignatureViewController () <UITextViewDelegate>
 
 @property (nonatomic, strong) UIButton *backButton;
 @property (weak, nonatomic) IBOutlet NTPlaceholderTextView *textView;
@@ -19,10 +19,13 @@
 
 @implementation NTSignatureViewController
 
+const int distanceOfMoving = 50;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backButton];
     self.textView.placeholder = @"请您在这里填写对于本文件的意见";
+    self.textView.delegate = self;
 }
 
 #pragma mark - 懒加载
@@ -36,9 +39,37 @@
     return _backButton;
 }
 
+#pragma mark - delegate
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    [self changeViewUp:YES];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    [self changeViewUp:NO];
+}
+
 #pragma mark - methods
 - (void)backAction {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
+- (void)changeViewUp:(BOOL)isUp
+{
+    [UIView beginAnimations:@"textViewMoveUpAndDown" context:nil];
+    [UIView setAnimationDuration:1.0f];
+    int changedValue;
+    if (isUp) {
+        changedValue = -distanceOfMoving;
+    }else {
+        changedValue = distanceOfMoving;
+    }
+    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + changedValue, self.view.frame.size.width, self.view.frame.size.height);
+    [UIView commitAnimations];
 }
 
 
