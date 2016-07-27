@@ -8,6 +8,7 @@
 
 #import "NTFlowViewController.h"
 #import "NTNormalFlowTableViewCell.h"
+#import "NTLatestFlowTableViewCell.h"
 
 @interface NTFlowViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -48,9 +49,17 @@
 
 #pragma mark - dataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NTNormalFlowTableViewCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"NTNormalFlowTableViewCell" owner:nil options:nil] firstObject];
-    return cell;
-}
+    if (indexPath.row == 0) {
+        NTLatestFlowTableViewCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"NTLatestFlowTableViewCell" owner:nil options:nil] firstObject];
+        cell.userInteractionEnabled = NO;
+        return cell;
+    } else {
+        NTNormalFlowTableViewCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"NTNormalFlowTableViewCell" owner:nil options:nil] firstObject];
+        cell.userInteractionEnabled = NO;
+        return cell;
+    }
+    
+        }
 
 #pragma mark - delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

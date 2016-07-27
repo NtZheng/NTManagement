@@ -23,6 +23,8 @@
 		6A6ED4351D279D38003BF471 /* NTUnlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ED4341D279D38003BF471 /* NTUnlockView.m */; };
 		6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7105D81D201CA70012AA99 /* NTLoginViewController.m */; };
 		6A7E4E191D214184000E68C1 /* NTLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E4E181D214184000E68C1 /* NTLoginTableViewCell.m */; };
+		6AA066DA1D48708300D253D1 /* NTLatestFlowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA066D81D48708300D253D1 /* NTLatestFlowTableViewCell.m */; };
+		6AA066DB1D48708300D253D1 /* NTLatestFlowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA066D91D48708300D253D1 /* NTLatestFlowTableViewCell.xib */; };
 		6AA7627B1D229E6400E93E50 /* NTLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA762781D229E6400E93E50 /* NTLockViewController.m */; };
 		6AA762891D22A27600E93E50 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA762811D22A27600E93E50 /* UIButton+Extension.m */; };
 		6AA7628A1D22A27600E93E50 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA762831D22A27600E93E50 /* UIView+Extension.m */; };
@@ -87,6 +89,9 @@
 		6A7105D81D201CA70012AA99 /* NTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLoginViewController.m; sourceTree = "<group>"; };
 		6A7E4E171D214184000E68C1 /* NTLoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLoginTableViewCell.h; sourceTree = "<group>"; };
 		6A7E4E181D214184000E68C1 /* NTLoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLoginTableViewCell.m; sourceTree = "<group>"; };
+		6AA066D71D48708300D253D1 /* NTLatestFlowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLatestFlowTableViewCell.h; sourceTree = "<group>"; };
+		6AA066D81D48708300D253D1 /* NTLatestFlowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLatestFlowTableViewCell.m; sourceTree = "<group>"; };
+		6AA066D91D48708300D253D1 /* NTLatestFlowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NTLatestFlowTableViewCell.xib; path = ../View/NTLatestFlowTableViewCell.xib; sourceTree = "<group>"; };
 		6AA762771D229E6400E93E50 /* NTLockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLockViewController.h; sourceTree = "<group>"; };
 		6AA762781D229E6400E93E50 /* NTLockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLockViewController.m; sourceTree = "<group>"; };
 		6AA7627C1D229E8400E93E50 /* NTLockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLockView.h; sourceTree = "<group>"; };
@@ -168,6 +173,8 @@
 				6A59B1831D2CAD7D0083DF1E /* NTUnreadedTableViewCell.m */,
 				6ABA51041D460622002C15BD /* NTNormalFlowTableViewCell.h */,
 				6ABA51051D460622002C15BD /* NTNormalFlowTableViewCell.m */,
+				6AA066D71D48708300D253D1 /* NTLatestFlowTableViewCell.h */,
+				6AA066D81D48708300D253D1 /* NTLatestFlowTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -448,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				6ABA51061D460622002C15BD /* NTNormalFlowTableViewCell.xib */,
+				6AA066D91D48708300D253D1 /* NTLatestFlowTableViewCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -640,6 +648,7 @@
 			files = (
 				6ABA51081D460622002C15BD /* NTNormalFlowTableViewCell.xib in Resources */,
 				6A666EE41D1ADA0100F590C9 /* LaunchScreen.storyboard in Resources */,
+				6AA066DB1D48708300D253D1 /* NTLatestFlowTableViewCell.xib in Resources */,
 				6A666EE11D1ADA0100F590C9 /* Assets.xcassets in Resources */,
 				6A666EDF1D1ADA0000F590C9 /* Main.storyboard in Resources */,
 			);
@@ -801,6 +810,7 @@
 				6AE4B8141D23C904005C9BD8 /* NTLockResultView.m in Sources */,
 				6A59B1841D2CAD7D0083DF1E /* NTUnreadedTableViewCell.m in Sources */,
 				6AA7627B1D229E6400E93E50 /* NTLockViewController.m in Sources */,
+				6AA066DA1D48708300D253D1 /* NTLatestFlowTableViewCell.m in Sources */,
 				6AA7628E1D22A38800E93E50 /* NTLockView.m in Sources */,
 				6AA7628C1D22A27600E93E50 /* main.m in Sources */,
 				6A6ED42B1D276098003BF471 /* PassWordTool.m in Sources */,
