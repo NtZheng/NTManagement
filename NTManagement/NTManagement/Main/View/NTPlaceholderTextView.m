@@ -14,6 +14,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textDidChange) name:UITextViewTextDidChangeNotification object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textWillBeginEdit) name:UITextViewTextDidBeginEditingNotification object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textEndEdit) name:UITextViewTextDidEndEditingNotification object:self];
 }
 
 // 手动创建
@@ -22,7 +24,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         //监听文本的输入
-        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textDidChange) name:UITextViewTextDidChangeNotification object:self];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange) name:UITextViewTextDidChangeNotification object:self];
+        
     }
     return self;
 }
@@ -46,10 +49,6 @@
     [super setAttributedText:attributedText];
     [self setNeedsDisplay];
 }
-- (void)textDidChange{
-    //重绘
-    [self setNeedsDisplay];
-}
 - (void)drawRect:(CGRect)rect {
     //如果文本框有值就返回
     if (self.hasText) return;
@@ -65,6 +64,21 @@
 //移除通知，预防野指针
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
+#pragma mark - methods
+- (void)textDidChange{
+    //重绘
+    [self setNeedsDisplay];
+}
+
+- (void)textWillBeginEdit {
+    self.layer.borderWidth = 1;
+    self.layer.borderColor = NTColor.CGColor;
+}
+
+- (void)textEndEdit {
+    self.layer.borderWidth = 0;
 }
 
 @end

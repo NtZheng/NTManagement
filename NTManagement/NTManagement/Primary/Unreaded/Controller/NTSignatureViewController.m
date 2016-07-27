@@ -61,7 +61,7 @@ const int distanceOfMoving = 50;
 - (void)changeViewUp:(BOOL)isUp
 {
     [UIView beginAnimations:@"textViewMoveUpAndDown" context:nil];
-    [UIView setAnimationDuration:1.0f];
+    [UIView setAnimationDuration:0.2f];
     int changedValue;
     if (isUp) {
         changedValue = -distanceOfMoving;
