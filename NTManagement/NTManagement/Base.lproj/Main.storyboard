@@ -263,12 +263,54 @@
                     <navigationItem key="navigationItem" title="未读文件" id="AMs-oc-wnS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="q9O-bV-Kld" kind="show" identifier="goIntoFlowViewController" id="KLn-iU-Llk"/>
+                        <segue destination="wbq-lL-oR6" kind="show" identifier="goIntoDetailsUnreadedViewController" id="gpd-h9-8xD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIo-v6-VMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1210.5" y="-761.5"/>
+        </scene>
+        <!--Unreaded Details View Controller-->
+        <scene sceneID="Pev-cG-c4f">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="wbq-lL-oR6" customClass="NTUnreadedDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bcx-oP-lfP"/>
+                        <viewControllerLayoutGuide type="bottom" id="KE1-zr-Vgx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AQI-x0-W4c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="q9O-bV-Kld" kind="show" identifier="goIntoFlowViewController" id="1BH-CH-pPL"/>
+                        <segue destination="hxM-oo-gqo" kind="show" identifier="goIntoSignatureViewController" id="24s-oe-Vmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hC-w8-ucS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712.5" y="-761.5"/>
+        </scene>
+        <!--Signature View Controller-->
+        <scene sceneID="Uw0-uw-ff8">
+            <objects>
+                <viewController id="hxM-oo-gqo" customClass="NTSignatureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sFi-hX-gSf"/>
+                        <viewControllerLayoutGuide type="bottom" id="MEh-Ot-e34"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MGT-Bj-Yr2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hmq-7d-GVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2257.5" y="-1088.5"/>
         </scene>
         <!--Flow View Controller-->
         <scene sceneID="1X1-uD-gJ9">
@@ -287,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qdb-dx-6Dk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644.5" y="-761.5"/>
+            <point key="canvasLocation" x="2257.5" y="-332.5"/>
         </scene>
         <!--未读文件-->
         <scene sceneID="Nfu-7h-S34">
@@ -335,7 +377,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7v-sj-TbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192.5" y="-3.5"/>
+            <point key="canvasLocation" x="1210.5" y="-3.5"/>
         </scene>
         <!--已读文件-->
         <scene sceneID="qZa-mc-2Ne">
@@ -393,7 +435,7 @@
         <!--设置-->
         <scene sceneID="F4S-ho-6Or">
             <objects>
-                <tableViewController title="设置" id="dML-Ia-bKB" customClass="NTSettingTableViewController" sceneMemberID="viewController">
+                <tableViewController title="设置" hidesBottomBarWhenPushed="YES" id="dML-Ia-bKB" customClass="NTSettingTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="6iX-Fa-EGu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

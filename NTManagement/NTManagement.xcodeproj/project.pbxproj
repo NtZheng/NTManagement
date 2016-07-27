@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		032DFAC9490B9929C30EAE31 /* libPods-NTManagementTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C9C52DBF228F7EC1420CC0 /* libPods-NTManagementTests.a */; };
 		29AC40C8EE94B67BB9721113 /* libPods-NTManagement.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB7B8913F66E4C8E6743EC7 /* libPods-NTManagement.a */; };
+		6A19DEB71D4897840074A7DB /* NTUnreadedDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A19DEB61D4897840074A7DB /* NTUnreadedDetailsViewController.m */; };
+		6A19DEBA1D48A5C80074A7DB /* NTSignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A19DEB91D48A5C80074A7DB /* NTSignatureViewController.m */; };
 		6A59B1811D2CAC940083DF1E /* NTUnreadedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A59B1801D2CAC940083DF1E /* NTUnreadedTableViewController.m */; };
 		6A59B1841D2CAD7D0083DF1E /* NTUnreadedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A59B1831D2CAD7D0083DF1E /* NTUnreadedTableViewCell.m */; };
 		6A60FD5B1D26C5A9002F9C88 /* NTSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A60FD5A1D26C5A9002F9C88 /* NTSettingTableViewController.m */; };
@@ -61,6 +63,10 @@
 /* Begin PBXFileReference section */
 		1D37ECAD778D6158FAC1D5D8 /* Pods-NTManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NTManagement/Pods-NTManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		44C9C52DBF228F7EC1420CC0 /* libPods-NTManagementTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTManagementTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A19DEB51D4897840074A7DB /* NTUnreadedDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnreadedDetailsViewController.h; sourceTree = "<group>"; };
+		6A19DEB61D4897840074A7DB /* NTUnreadedDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnreadedDetailsViewController.m; sourceTree = "<group>"; };
+		6A19DEB81D48A5C80074A7DB /* NTSignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSignatureViewController.h; sourceTree = "<group>"; };
+		6A19DEB91D48A5C80074A7DB /* NTSignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSignatureViewController.m; sourceTree = "<group>"; };
 		6A59B17F1D2CAC940083DF1E /* NTUnreadedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnreadedTableViewController.h; sourceTree = "<group>"; };
 		6A59B1801D2CAC940083DF1E /* NTUnreadedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnreadedTableViewController.m; sourceTree = "<group>"; };
 		6A59B1821D2CAD7D0083DF1E /* NTUnreadedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnreadedTableViewCell.h; sourceTree = "<group>"; };
@@ -162,6 +168,10 @@
 				6ABA51021D460604002C15BD /* NTFlowViewController.m */,
 				6A59B17F1D2CAC940083DF1E /* NTUnreadedTableViewController.h */,
 				6A59B1801D2CAC940083DF1E /* NTUnreadedTableViewController.m */,
+				6A19DEB51D4897840074A7DB /* NTUnreadedDetailsViewController.h */,
+				6A19DEB61D4897840074A7DB /* NTUnreadedDetailsViewController.m */,
+				6A19DEB81D48A5C80074A7DB /* NTSignatureViewController.h */,
+				6A19DEB91D48A5C80074A7DB /* NTSignatureViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -815,7 +825,9 @@
 				6AA7628C1D22A27600E93E50 /* main.m in Sources */,
 				6A6ED42B1D276098003BF471 /* PassWordTool.m in Sources */,
 				6A60FD5B1D26C5A9002F9C88 /* NTSettingTableViewController.m in Sources */,
+				6A19DEBA1D48A5C80074A7DB /* NTSignatureViewController.m in Sources */,
 				6ABA51071D460622002C15BD /* NTNormalFlowTableViewCell.m in Sources */,
+				6A19DEB71D4897840074A7DB /* NTUnreadedDetailsViewController.m in Sources */,
 				6ABA51031D460604002C15BD /* NTFlowViewController.m in Sources */,
 				6A7E4E191D214184000E68C1 /* NTLoginTableViewCell.m in Sources */,
 				6AB824F81D2405EC00B26D18 /* NTTabBarController.m in Sources */,

@@ -44,7 +44,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"goIntoFlowViewController" sender:nil];
+    [self performSegueWithIdentifier:@"goIntoDetailsUnreadedViewController" sender:nil];
 }
 
 @end
