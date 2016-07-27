@@ -25,6 +25,7 @@
     NTUnreadedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"unreadedCell"];
 //    cell.textLabel.text = @"nineten"; //这句代码是不能够写的，如果写了，那么cell就会创建系统的子控件，就会造成自定义的子控件被覆盖了
     cell.nameTextView.text = @"希望东北大学将网络中心的防洪措施进行加强，最近经常随机断网，这样学生很无奈";
+    cell.nameTextView.userInteractionEnabled = NO;
     cell.timeLabel.text = @"上午11:15";
     cell.fileImageView.image = [UIImage imageNamed:@"NEU"];
     return cell;

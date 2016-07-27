@@ -24,8 +24,11 @@ const int distanceOfMoving = 50;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backButton];
+    self.finishButton.userInteractionEnabled = NO;
+    [self.finishButton addTarget:self action:@selector(finishButtonAction) forControlEvents:UIControlEventTouchUpInside];
     self.textView.placeholder = @"请您在这里填写对于本文件的意见";
     self.textView.delegate = self;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkOutCanDoFinishOperation) name:UITextViewTextDidChangeNotification object:self.textView];
 }
 
 #pragma mark - 懒加载
@@ -70,6 +73,20 @@ const int distanceOfMoving = 50;
     }
     self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + changedValue, self.view.frame.size.width, self.view.frame.size.height);
     [UIView commitAnimations];
+}
+
+- (void)checkOutCanDoFinishOperation {
+    if (self.textView.hasText) {
+        [self.finishButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.finishButton.userInteractionEnabled = YES;
+    } else {
+        [self.finishButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        self.finishButton.userInteractionEnabled = NO;
+    }
+}
+
+- (void)finishButtonAction {
+    
 }
 
 
