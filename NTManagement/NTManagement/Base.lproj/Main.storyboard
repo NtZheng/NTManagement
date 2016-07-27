@@ -304,9 +304,60 @@
                     <view key="view" contentMode="scaleToFill" id="MGT-Bj-Yr2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的意见" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h65-zj-opU">
+                                <rect key="frame" x="20" y="84" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dC-aW-wh6">
+                                <rect key="frame" x="20" y="395" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.36862745099999999" green="0.57647058819999997" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FNz-Q9-87l"/>
+                                </constraints>
+                                <state key="normal" title="提交">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请您在这里填写对于本文件的意见..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h3C-tl-Bts">
+                                <rect key="frame" x="20" y="125" width="335" height="250"/>
+                                <color key="backgroundColor" white="0.8985721982758621" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="VVQ-r4-Fa5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h3C-tl-Bts" secondAttribute="trailing" constant="20" id="04n-7b-OeK"/>
+                            <constraint firstItem="h65-zj-opU" firstAttribute="top" secondItem="sFi-hX-gSf" secondAttribute="bottom" constant="20" id="K85-L5-WqU"/>
+                            <constraint firstItem="2dC-aW-wh6" firstAttribute="top" secondItem="h3C-tl-Bts" secondAttribute="bottom" constant="20" id="VYu-MY-AQg"/>
+                            <constraint firstItem="h3C-tl-Bts" firstAttribute="top" secondItem="h65-zj-opU" secondAttribute="bottom" constant="20" id="Ygv-SU-gjR"/>
+                            <constraint firstItem="h65-zj-opU" firstAttribute="leading" secondItem="MGT-Bj-Yr2" secondAttribute="leading" constant="20" id="a1I-Te-8gw"/>
+                            <constraint firstAttribute="trailing" secondItem="2dC-aW-wh6" secondAttribute="trailing" constant="20" id="bw1-93-1b7"/>
+                            <constraint firstItem="2dC-aW-wh6" firstAttribute="leading" secondItem="MGT-Bj-Yr2" secondAttribute="leading" constant="20" id="cYG-n7-qs0"/>
+                            <constraint firstItem="h3C-tl-Bts" firstAttribute="leading" secondItem="MGT-Bj-Yr2" secondAttribute="leading" constant="20" id="pvZ-pc-lCo"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="finishButton" destination="2dC-aW-wh6" id="9aL-nM-eFZ"/>
+                        <outlet property="textView" destination="h3C-tl-Bts" id="Jxn-g3-23L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmq-7d-GVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

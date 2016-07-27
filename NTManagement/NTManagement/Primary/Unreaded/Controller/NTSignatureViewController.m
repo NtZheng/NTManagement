@@ -11,6 +11,8 @@
 @interface NTSignatureViewController ()
 
 @property (nonatomic, strong) UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UIButton *finishButton;
 
 @end
 
