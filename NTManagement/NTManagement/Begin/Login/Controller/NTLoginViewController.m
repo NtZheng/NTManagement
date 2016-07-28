@@ -9,6 +9,7 @@
 #import "NTLoginViewController.h"
 #import "NTLoginTableViewCell.h"
 #import "AFNetworking.h"
+#import "MBProgressHUD.h"
 
 @interface NTLoginViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -26,6 +27,7 @@
 
 {
     UIButton *tempButton;// 为了扩展cell.myButton的作用域（需要对cell.myButton的属性进行改变）
+    UITextField *phoneTextField;
 }
 
 - (void)viewDidLoad {
@@ -36,12 +38,10 @@
     self.view.backgroundColor = [UIColor colorWithWhite:0.96 alpha:1.0];
     
     [self.forgetPasswordButton addTarget:self action:@selector(forgetPasswordAction) forControlEvents:UIControlEventTouchUpInside];
-//    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"]) {
-//        [self performSegueWithIdentifier:@"goIntoUnlock" sender:nil];
-//    }
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"lockPathArray"] != nil) {
         [self performSegueWithIdentifier:@"goIntoUnlock" sender:nil];
     }
+//    NSLog(@"%@",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]);
 }
 
 #pragma mark - methods
@@ -56,15 +56,18 @@
 }
 
 - (IBAction)loginAction:(id)sender {
-    // 保存登录状态
-    [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"isLogin"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    [self performSegueWithIdentifier:@"goIntoLock" sender:nil];
-    
     // 后台交互
-    [[NTAFNetworking shareAFNetworkingService] doGetRequest:@"http://mountainfile.applinzi.com/login.php?mobile=18240439732" result:^(id responseObject, NSError *error) {
+    [[NTAFNetworking shareAFNetworkingService] doGetRequest:[NSString stringWithFormat:@"http://mountainfile.applinzi.com/login.php?mobile=%@",phoneTextField.text] result:^(id responseObject, NSError *error) {
         NSString *result = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",result);
+        if ([result isEqualToString:@"1"]) {
+            // 保存登录状态
+            [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"isLogin"];
+            [[NSUserDefaults standardUserDefaults] setObject:phoneTextField.text forKey:@"phoneNumber"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [self performSegueWithIdentifier:@"goIntoLock" sender:nil];
+        } else {
+            [self showCustomViewWithText:@"不存在该用户" image:@"close"];
+        }
     }];
 }
 
@@ -86,6 +89,21 @@
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
+// 官方demo中的自定义提示的方法
+- (void)showCustomViewWithText :(NSString *)text image :(NSString *)imageName {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    // Set the custom view mode to show any view.
+    hud.mode = MBProgressHUDModeCustomView;
+    // Set an image view with a checkmark.
+    UIImage *image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    hud.customView = [[UIImageView alloc] initWithImage:image];
+    // Looks a bit nicer if we make it square.
+    hud.square = YES;
+    // Optional label text.
+    hud.labelText = text;
+    [hud hide:YES afterDelay:2.f];
+}
+
 #pragma mark - 懒加载
 - (NSTimer *)timer {
     if (_timer == nil) {
@@ -102,6 +120,7 @@
         cell.myImageView.image = [UIImage imageNamed:@"phoneNumber.png"];
         cell.myTextField.placeholder = @"请输入手机号";
         [cell.myButton addTarget:self action:@selector(sendIdentifiedCodeAction) forControlEvents:UIControlEventTouchUpInside];
+        phoneTextField = cell.myTextField;
         tempButton = cell.myButton;
     } else {
         cell.myImageView.image = [UIImage imageNamed:@"password.png"];
