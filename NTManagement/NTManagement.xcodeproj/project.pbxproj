@@ -39,6 +39,7 @@
 		6ABA51031D460604002C15BD /* NTFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA51021D460604002C15BD /* NTFlowViewController.m */; };
 		6ABA51071D460622002C15BD /* NTNormalFlowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA51051D460622002C15BD /* NTNormalFlowTableViewCell.m */; };
 		6ABA51081D460622002C15BD /* NTNormalFlowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ABA51061D460622002C15BD /* NTNormalFlowTableViewCell.xib */; };
+		6AC79E311D49ECB4002A2C26 /* NTAFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC79E301D49ECB4002A2C26 /* NTAFNetworking.m */; };
 		6ADB7D811D2A9DEF006BAFEA /* NTInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB7D801D2A9DEF006BAFEA /* NTInformationViewController.m */; };
 		6AE4B8141D23C904005C9BD8 /* NTLockResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE4B8131D23C904005C9BD8 /* NTLockResultView.m */; };
 		CD12DC789B976C73B52E7864 /* libPods-NTManagementUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20A17B8B337DACFA48CBB4E /* libPods-NTManagementUITests.a */; };
@@ -122,6 +123,8 @@
 		6ABA51041D460622002C15BD /* NTNormalFlowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTNormalFlowTableViewCell.h; sourceTree = "<group>"; };
 		6ABA51051D460622002C15BD /* NTNormalFlowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTNormalFlowTableViewCell.m; sourceTree = "<group>"; };
 		6ABA51061D460622002C15BD /* NTNormalFlowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NTNormalFlowTableViewCell.xib; path = ../View/NTNormalFlowTableViewCell.xib; sourceTree = "<group>"; };
+		6AC79E2F1D49ECB4002A2C26 /* NTAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTAFNetworking.h; sourceTree = "<group>"; };
+		6AC79E301D49ECB4002A2C26 /* NTAFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTAFNetworking.m; sourceTree = "<group>"; };
 		6ADB7D7F1D2A9DEF006BAFEA /* NTInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTInformationViewController.h; sourceTree = "<group>"; };
 		6ADB7D801D2A9DEF006BAFEA /* NTInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTInformationViewController.m; sourceTree = "<group>"; };
 		6AE4B8121D23C904005C9BD8 /* NTLockResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLockResultView.h; sourceTree = "<group>"; };
@@ -295,6 +298,8 @@
 				6A6ED4271D276098003BF471 /* KeychainTool.m */,
 				6A6ED4281D276098003BF471 /* PassWordTool.h */,
 				6A6ED4291D276098003BF471 /* PassWordTool.m */,
+				6AC79E2F1D49ECB4002A2C26 /* NTAFNetworking.h */,
+				6AC79E301D49ECB4002A2C26 /* NTAFNetworking.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -827,6 +832,7 @@
 				6A59B1811D2CAC940083DF1E /* NTUnreadedTableViewController.m in Sources */,
 				6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */,
 				6A6ED4351D279D38003BF471 /* NTUnlockView.m in Sources */,
+				6AC79E311D49ECB4002A2C26 /* NTAFNetworking.m in Sources */,
 				6AA7628B1D22A27600E93E50 /* AppDelegate.m in Sources */,
 				6AA762891D22A27600E93E50 /* UIButton+Extension.m in Sources */,
 				6ADB7D811D2A9DEF006BAFEA /* NTInformationViewController.m in Sources */,

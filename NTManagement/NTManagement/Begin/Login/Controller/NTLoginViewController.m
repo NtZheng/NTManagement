@@ -59,7 +59,10 @@
     [self performSegueWithIdentifier:@"goIntoLock" sender:nil];
     
     // 后台交互
-    [self sendGetRequest];
+    [[NTAFNetworking shareAFNetworkingService] doGetRequest:@"http://mountainfile.applinzi.com/login.php?mobile=18240439732" result:^(id responseObject, NSError *error) {
+        NSString *result = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",result);
+    }];
 }
 
 - (void)timerAction {
@@ -80,23 +83,6 @@
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
-- (void)sendGetRequest {
-    
-    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-    session.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json",nil];
-    session.requestSerializer = [AFHTTPRequestSerializer serializer];
-    session.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [session GET:@"http://mountainfile.applinzi.com/login.php?mobile=18240439732" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSString *result = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",result);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
-    }];
-    
-    
-}
 #pragma mark - 懒加载
 - (NSTimer *)timer {
     if (_timer == nil) {

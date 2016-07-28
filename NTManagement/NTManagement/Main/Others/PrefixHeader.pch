@@ -19,5 +19,6 @@
 // 引入类
 #import "UIButton+Extension.h"
 #import "UIView+Extension.h"
+#import "NTAFNetworking.h"
 
 #endif
