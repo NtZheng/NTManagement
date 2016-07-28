@@ -42,6 +42,7 @@
 		6AC79E311D49ECB4002A2C26 /* NTAFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC79E301D49ECB4002A2C26 /* NTAFNetworking.m */; };
 		6ADB7D811D2A9DEF006BAFEA /* NTInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB7D801D2A9DEF006BAFEA /* NTInformationViewController.m */; };
 		6AE4B8141D23C904005C9BD8 /* NTLockResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE4B8131D23C904005C9BD8 /* NTLockResultView.m */; };
+		6AE752361D4A1FE100A4BAAB /* NTUnreadedFileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE752351D4A1FE100A4BAAB /* NTUnreadedFileModel.m */; };
 		CD12DC789B976C73B52E7864 /* libPods-NTManagementUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20A17B8B337DACFA48CBB4E /* libPods-NTManagementUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +130,8 @@
 		6ADB7D801D2A9DEF006BAFEA /* NTInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTInformationViewController.m; sourceTree = "<group>"; };
 		6AE4B8121D23C904005C9BD8 /* NTLockResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLockResultView.h; sourceTree = "<group>"; };
 		6AE4B8131D23C904005C9BD8 /* NTLockResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLockResultView.m; sourceTree = "<group>"; };
+		6AE752341D4A1FE100A4BAAB /* NTUnreadedFileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnreadedFileModel.h; sourceTree = "<group>"; };
+		6AE752351D4A1FE100A4BAAB /* NTUnreadedFileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnreadedFileModel.m; sourceTree = "<group>"; };
 		6AEC8A911D1C197C00648C3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DB09DB2A985706F0CDF5F3E /* Pods-NTManagementTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTManagementTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NTManagementTests/Pods-NTManagementTests.release.xcconfig"; sourceTree = "<group>"; };
 		98CCAC7D872136A15C0A85B4 /* Pods-NTManagementTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTManagementTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NTManagementTests/Pods-NTManagementTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -474,6 +477,8 @@
 		6ABA50FA1D46052B002C15BD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6AE752341D4A1FE100A4BAAB /* NTUnreadedFileModel.h */,
+				6AE752351D4A1FE100A4BAAB /* NTUnreadedFileModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -836,6 +841,7 @@
 				6AA7628B1D22A27600E93E50 /* AppDelegate.m in Sources */,
 				6AA762891D22A27600E93E50 /* UIButton+Extension.m in Sources */,
 				6ADB7D811D2A9DEF006BAFEA /* NTInformationViewController.m in Sources */,
+				6AE752361D4A1FE100A4BAAB /* NTUnreadedFileModel.m in Sources */,
 				6AE4B8141D23C904005C9BD8 /* NTLockResultView.m in Sources */,
 				6A59B1841D2CAD7D0083DF1E /* NTUnreadedTableViewCell.m in Sources */,
 				6AA7627B1D229E6400E93E50 /* NTLockViewController.m in Sources */,

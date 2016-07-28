@@ -8,8 +8,12 @@
 
 #import "NTUnreadedTableViewController.h"
 #import "NTUnreadedTableViewCell.h"
+#import "MJRefresh.h"
+#import "NTUnreadedFileModel.h"
 
 @interface NTUnreadedTableViewController ()
+
+@property (nonatomic, strong) NSMutableArray *unreadedFiles;
 
 @end
 
@@ -17,16 +21,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        self.unreadedFiles = [NSMutableArray array];
+        [[NTAFNetworking shareAFNetworkingService] doGetRequest:[NSString stringWithFormat:@"http://mountainfile.applinzi.com/returnfile.php?mobile=%@&request=0",[[NSUserDefaults standardUserDefaults] objectForKey:@"phoneNumber"]] result:^(id responseObject, NSError *error) {
+            if (error == nil) {
+                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                NSArray *array = [dictionary objectForKey:@"data"];
+                for (NSDictionary *dic in array) {
+                    [self.unreadedFiles addObject:[NTUnreadedFileModel modelWithDictionary:dic]];
+                }
+                [self.tableView reloadData];
+                [self.tableView.mj_header endRefreshing];
+            } else {
+                
+            }
+            
+        }];
+    }];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    self.tableView.mj_header = header;
+    [self.tableView.mj_header beginRefreshing];
 }
     
 #pragma mark - dataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NTUnreadedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"unreadedCell"];
-//    cell.textLabel.text = @"nineten"; //这句代码是不能够写的，如果写了，那么cell就会创建系统的子控件，就会造成自定义的子控件被覆盖了
-    cell.nameTextView.text = @"希望东北大学将网络中心的防洪措施进行加强，最近经常随机断网，这样学生很无奈";
+    cell.nameTextView.text = ((NTUnreadedFileModel *)self.unreadedFiles[indexPath.row]).fileName;
     cell.nameTextView.userInteractionEnabled = NO;
-    cell.timeLabel.text = @"上午11:15";
+    cell.timeLabel.text = ((NTUnreadedFileModel *)self.unreadedFiles[indexPath.row]).date;
     cell.fileImageView.image = [UIImage imageNamed:@"NEU"];
     return cell;
 }
@@ -36,8 +58,9 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.unreadedFiles.count;
 }
+
 #pragma mark - delegate
 // 取消header
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
