@@ -56,6 +56,9 @@
     [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"isLogin"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [self performSegueWithIdentifier:@"goIntoLock" sender:nil];
+    
+    // 后台交互
+    [self sendGetRequest];
 }
 
 - (void)timerAction {
@@ -76,6 +79,45 @@
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
+- (void)sendGetRequest {
+    NSString *urlStr = @"http://mountainfile.applinzi.com/login.php?mobile=18240439732";
+    NSURL *url = [NSURL URLWithString:urlStr];
+    // 关于post 方式的话 ，必须使用可变的请求，只有可变请求才能进行 协议方式的设定， 以及请求体等等的设定。
+    // 因为不可变请求的话  是默认 get方式的。
+    // post的方式比较  保存了 用户的隐私安全 ，将其中用户比较隐私的东西，保存在请求体中吧。
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    // 设置请求方式  为POST   记住 必须大写。
+    request.HTTPMethod = @"GET";
+    
+//    NSDictionary *header = @{
+//                             @"Content-Type": @"application/json"
+//                             };
+//    request.allHTTPHeaderFields = header;
+    
+//    NSDictionary *parameters = @{
+//                                 @"username": @"ezreal",
+//                                 @"phone": @110,
+//                                 @"password": @123,
+//                                 @"captcha_user": @12,
+//                                 @"captcha_wangyi": @12
+//                                 };
+//    // 设置请求体 ，返回data，  直接用nsstring的方法  ，进行转换。
+//    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:parameters options:NSJSONWritingPrettyPrinted error:nil];
+    
+    // 最大访问超时时间。
+    request.timeoutInterval = 10;
+    
+    // 设置请求头内容  ，但一般不要求设置 。用户的手机系统
+    [request setValue:@"ios 9.0" forHTTPHeaderField:@"use-Agent-to"];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSString *dataStr = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",dataStr);
+        NSLog(@"%@",connectionError);
+    }];
+}
 #pragma mark - 懒加载
 - (NSTimer *)timer {
     if (_timer == nil) {

@@ -465,7 +465,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="561"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="阿狸" translatesAutoresizingMaskIntoConstraints="NO" id="UcQ-iU-ejw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="UcQ-iU-ejw">
                                 <rect key="frame" x="0.0" y="64" width="375" height="100"/>
                             </imageView>
                         </subviews>
@@ -538,11 +538,11 @@
         <image name="back" width="200" height="200"/>
         <image name="information_normal" width="37" height="37"/>
         <image name="information_selected" width="37" height="37"/>
+        <image name="logo" width="600" height="306"/>
         <image name="readed_normal" width="37" height="37"/>
         <image name="readed_selected" width="37" height="37"/>
         <image name="unreaded_normal" width="37" height="37"/>
         <image name="unreaded_selected" width="37" height="37"/>
-        <image name="阿狸" width="1365" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="55i-2r-YpE"/>
