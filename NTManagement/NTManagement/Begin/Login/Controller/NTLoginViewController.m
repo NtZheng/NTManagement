@@ -36,7 +36,10 @@
     self.view.backgroundColor = [UIColor colorWithWhite:0.96 alpha:1.0];
     
     [self.forgetPasswordButton addTarget:self action:@selector(forgetPasswordAction) forControlEvents:UIControlEventTouchUpInside];
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"]) {
+//    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"]) {
+//        [self performSegueWithIdentifier:@"goIntoUnlock" sender:nil];
+//    }
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"lockPathArray"] != nil) {
         [self performSegueWithIdentifier:@"goIntoUnlock" sender:nil];
     }
 }
