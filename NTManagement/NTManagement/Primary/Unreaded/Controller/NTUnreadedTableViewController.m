@@ -49,7 +49,7 @@
     cell.nameTextView.text = ((NTUnreadedFileModel *)self.unreadedFiles[indexPath.row]).fileName;
     cell.nameTextView.userInteractionEnabled = NO;
     cell.timeLabel.text = ((NTUnreadedFileModel *)self.unreadedFiles[indexPath.row]).date;
-    cell.fileImageView.image = [UIImage imageNamed:@"NEU"];
+    cell.fileImageView.image = [UIImage imageNamed:@"file"];
     return cell;
 }
 
@@ -67,10 +67,13 @@
     return 0.02;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.02;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NTUnreadedTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [[NSUserDefaults standardUserDefaults] setObject:cell.nameTextView.text forKey:@"currentFileName"];
-    NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"currentFileName"]);
     [self performSegueWithIdentifier:@"goIntoDetailsUnreadedViewController" sender:nil];
 }
 

@@ -235,6 +235,45 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6A6464731D4AFA190048FB24 /* Readed */ = {
+			isa = PBXGroup;
+			children = (
+				6A6464741D4AFA190048FB24 /* Controller */,
+				6A6464751D4AFA190048FB24 /* Model */,
+				6A6464761D4AFA190048FB24 /* View */,
+				6A6464771D4AFA190048FB24 /* Xib */,
+			);
+			path = Readed;
+			sourceTree = "<group>";
+		};
+		6A6464741D4AFA190048FB24 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6A6464751D4AFA190048FB24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A6464761D4AFA190048FB24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6A6464771D4AFA190048FB24 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 		6A666EC81D1ADA0000F590C9 = {
 			isa = PBXGroup;
 			children = (
@@ -375,7 +414,7 @@
 			children = (
 				6A7F20911D24053D0032F60A /* Main */,
 				6A7F20931D24053D0032F60A /* Unreaded */,
-				6A7F20921D24053D0032F60A /* Readed */,
+				6A6464731D4AFA190048FB24 /* Readed */,
 				6A7F20901D24053D0032F60A /* Information */,
 			);
 			path = Primary;
@@ -398,13 +437,6 @@
 				6AB824F71D2405EC00B26D18 /* NTTabBarController.m */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		6A7F20921D24053D0032F60A /* Readed */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Readed;
 			sourceTree = "<group>";
 		};
 		6A7F20931D24053D0032F60A /* Unreaded */ = {

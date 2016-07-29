@@ -53,7 +53,7 @@ const int buttonMargin = 20;
 
 - (UIImageView *)imageView {
     if (_imageView == nil) {
-        _imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"xiang"]];
+        _imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"文案"]];
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return _imageView;
