@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UIView *circleView;
 @property (weak, nonatomic) IBOutlet UIView *segmentLine;
 @property (weak, nonatomic) IBOutlet UIView *outerCircleView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end
 
@@ -25,6 +27,15 @@
     self.circleView.layer.cornerRadius = 10;
     self.outerCircleView.backgroundColor = [UIColor colorWithRed:97/255.0 green:147/255.0 blue:224/255.0 alpha:0.5];
     self.outerCircleView.layer.cornerRadius = 14;
+}
+
+#pragma mark - API
+- (void)setNameLabelText :(NSString *)text {
+    self.nameLabel.text = text;
+}
+
+- (void)setDateLabelText :(NSString *)text {
+    self.dateLabel.text = text;
 }
 
 @end

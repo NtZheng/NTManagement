@@ -22,19 +22,19 @@
                             <constraint firstAttribute="width" constant="28" id="eG4-ZM-SKj"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Isa-9H-XZ0">
+                        <rect key="frame" x="60" y="0.0" width="2" height="149"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="xlZ-GT-gcm"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6iY-pu-sTA">
                         <rect key="frame" x="51" y="31" width="20" height="20"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="AdL-IC-iAd"/>
                             <constraint firstAttribute="height" constant="20" id="tCS-3T-HMj"/>
-                        </constraints>
-                    </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Isa-9H-XZ0">
-                        <rect key="frame" x="60" y="50" width="2" height="99"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="2" id="xlZ-GT-gcm"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016年7月25日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9G-Dc-9O5">
@@ -66,6 +66,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Isa-9H-XZ0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="00A-sQ-1XS"/>
+                    <constraint firstItem="Isa-9H-XZ0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8lP-Li-kBr"/>
                     <constraint firstItem="6iY-pu-sTA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="CJ9-s1-g87"/>
                     <constraint firstAttribute="bottom" secondItem="uTL-ZU-f6M" secondAttribute="bottom" constant="73" id="F7R-hR-jCK"/>
                     <constraint firstItem="uTL-ZU-f6M" firstAttribute="leading" secondItem="Isa-9H-XZ0" secondAttribute="trailing" constant="70" id="Jzx-PT-GFj"/>
@@ -86,6 +87,7 @@
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="WkX-Pd-GH2"/>
+                        <exclude reference="uLj-uA-h2I"/>
                         <exclude reference="gG0-vJ-BlI"/>
                         <exclude reference="mFi-rO-GCa"/>
                     </mask>
@@ -93,10 +95,12 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="circleView" destination="6iY-pu-sTA" id="vdh-08-9tG"/>
+                <outlet property="dateLabel" destination="b9G-Dc-9O5" id="kZf-DK-lbJ"/>
+                <outlet property="nameLabel" destination="uTL-ZU-f6M" id="NvL-oR-j9V"/>
                 <outlet property="outerCircleView" destination="eHC-lL-u9V" id="vWy-HN-qnd"/>
                 <outlet property="segmentLine" destination="Isa-9H-XZ0" id="ojd-aV-4PL"/>
             </connections>
-            <point key="canvasLocation" x="443" y="358"/>
+            <point key="canvasLocation" x="314" y="338"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -43,6 +43,7 @@
 		6ADB7D811D2A9DEF006BAFEA /* NTInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB7D801D2A9DEF006BAFEA /* NTInformationViewController.m */; };
 		6AE4B8141D23C904005C9BD8 /* NTLockResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE4B8131D23C904005C9BD8 /* NTLockResultView.m */; };
 		6AE752361D4A1FE100A4BAAB /* NTUnreadedFileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE752351D4A1FE100A4BAAB /* NTUnreadedFileModel.m */; };
+		6AFDF6471D4AE96A0004D97E /* NTFlowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDF6461D4AE96A0004D97E /* NTFlowModel.m */; };
 		CD12DC789B976C73B52E7864 /* libPods-NTManagementUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20A17B8B337DACFA48CBB4E /* libPods-NTManagementUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +134,8 @@
 		6AE752341D4A1FE100A4BAAB /* NTUnreadedFileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnreadedFileModel.h; sourceTree = "<group>"; };
 		6AE752351D4A1FE100A4BAAB /* NTUnreadedFileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnreadedFileModel.m; sourceTree = "<group>"; };
 		6AEC8A911D1C197C00648C3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AFDF6451D4AE96A0004D97E /* NTFlowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFlowModel.h; sourceTree = "<group>"; };
+		6AFDF6461D4AE96A0004D97E /* NTFlowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFlowModel.m; sourceTree = "<group>"; };
 		6DB09DB2A985706F0CDF5F3E /* Pods-NTManagementTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTManagementTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NTManagementTests/Pods-NTManagementTests.release.xcconfig"; sourceTree = "<group>"; };
 		98CCAC7D872136A15C0A85B4 /* Pods-NTManagementTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTManagementTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NTManagementTests/Pods-NTManagementTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9FB7B8913F66E4C8E6743EC7 /* libPods-NTManagement.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTManagement.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -479,6 +482,8 @@
 			children = (
 				6AE752341D4A1FE100A4BAAB /* NTUnreadedFileModel.h */,
 				6AE752351D4A1FE100A4BAAB /* NTUnreadedFileModel.m */,
+				6AFDF6451D4AE96A0004D97E /* NTFlowModel.h */,
+				6AFDF6461D4AE96A0004D97E /* NTFlowModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -850,6 +855,7 @@
 				6AA7628C1D22A27600E93E50 /* main.m in Sources */,
 				6A3B03361D48CE2A00355C98 /* NTPlaceholderTextView.m in Sources */,
 				6A6ED42B1D276098003BF471 /* PassWordTool.m in Sources */,
+				6AFDF6471D4AE96A0004D97E /* NTFlowModel.m in Sources */,
 				6A60FD5B1D26C5A9002F9C88 /* NTSettingTableViewController.m in Sources */,
 				6A19DEBA1D48A5C80074A7DB /* NTSignatureViewController.m in Sources */,
 				6ABA51071D460622002C15BD /* NTNormalFlowTableViewCell.m in Sources */,

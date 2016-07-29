@@ -68,7 +68,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NTUnreadedTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [[NSUserDefaults standardUserDefaults] setObject:cell.nameTextView.text forKey:@"currentFileName"];
+    NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"currentFileName"]);
     [self performSegueWithIdentifier:@"goIntoDetailsUnreadedViewController" sender:nil];
 }
+
 
 @end

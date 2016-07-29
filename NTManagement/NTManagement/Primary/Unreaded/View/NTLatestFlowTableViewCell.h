@@ -10,4 +10,7 @@
 
 @interface NTLatestFlowTableViewCell : UITableViewCell
 
+- (void)setNameLabelText :(NSString *)text;
+- (void)setDateLabelText :(NSString *)text;
+
 @end

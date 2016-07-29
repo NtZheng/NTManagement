@@ -32,6 +32,12 @@ const int buttonMargin = 20;
     [self.view addSubview:self.signatureButton];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backButton];
     
+    [[NTAFNetworking shareAFNetworkingService] doGetRequest:@"http://mountainfile.applinzi.com/returnfileinfo.php?filename=file1&request=info" result:^(id responseObject, NSError *error) {
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSArray *array = [dictionary objectForKey:@"data"];
+        NSString *imageURL = [array objectAtIndex:0];
+    }];
+    
 }
 
 #pragma mark - 懒加载

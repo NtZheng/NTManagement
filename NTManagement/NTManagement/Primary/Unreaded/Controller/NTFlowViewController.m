@@ -9,11 +9,14 @@
 #import "NTFlowViewController.h"
 #import "NTNormalFlowTableViewCell.h"
 #import "NTLatestFlowTableViewCell.h"
+#import "MJRefresh.h"
+#import "NTFlowModel.h"
 
 @interface NTFlowViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *myTableView;
 @property (nonatomic, strong) UIButton *backButton;
+@property (nonatomic, strong) NSMutableArray *flows;
 
 @end
 
@@ -23,6 +26,23 @@
     [super viewDidLoad];
     [self.view addSubview:self.myTableView];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backButton];
+    
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        self.flows = [NSMutableArray array];
+        [[NTAFNetworking shareAFNetworkingService] doGetRequest:[NSString stringWithFormat:@"http://mountainfile.applinzi.com/returnfileinfo.php?filename=%@&request=flow",[[NSUserDefaults standardUserDefaults] objectForKey:@"currentFileName"]] result:^(id responseObject, NSError *error) {
+            NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+            NSArray *array = [dictionary objectForKey:@"data"];
+            for (NSDictionary *dic in array) {
+                [self.flows addObject:[NTFlowModel modelWithDictionary:dic]];
+            }
+            [self.myTableView reloadData];
+            [self.myTableView.mj_header endRefreshing];
+        }];
+        
+    }];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    self.myTableView.mj_header = header;
+    [self.myTableView.mj_header beginRefreshing];
 }
 
 #pragma mark - 懒加载
@@ -48,27 +68,31 @@
 
 #pragma mark - dataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
+    NTFlowModel *currentFlowModel = self.flows[indexPath.row];
+    if ([currentFlowModel.state isEqualToString:@"0"]) {
         NTLatestFlowTableViewCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"NTLatestFlowTableViewCell" owner:nil options:nil] firstObject];
+        [cell setNameLabelText:currentFlowModel.name];
+        [cell setDateLabelText:currentFlowModel.date];
         cell.userInteractionEnabled = NO;
         return cell;
     } else {
         NTNormalFlowTableViewCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"NTNormalFlowTableViewCell" owner:nil options:nil] firstObject];
+        [cell setNameLabelText:currentFlowModel.name];
+        [cell setDateLabelText:currentFlowModel.date];
         cell.userInteractionEnabled = NO;
         return cell;
     }
-    
-        }
+}
 
-#pragma mark - delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return self.flows.count;
 }
 
+#pragma mark - delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 0.02;
 }

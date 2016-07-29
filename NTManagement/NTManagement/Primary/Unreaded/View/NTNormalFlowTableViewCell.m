@@ -26,4 +26,13 @@
     self.circleView.layer.cornerRadius = 8;
 }
 
+#pragma mark - API
+- (void)setNameLabelText :(NSString *)text {
+    self.nameLabel.text = text;
+}
+
+- (void)setDateLabelText :(NSString *)text {
+    self.dateLabel.text = text;
+}
+
 @end
