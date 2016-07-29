@@ -16,6 +16,7 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIButton *flowButton;
 @property (nonatomic, strong) UIButton *signatureButton;
+@property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
@@ -30,6 +31,7 @@ const int buttonMargin = 20;
     [self.view addSubview:self.flowButton];
     [self.view addSubview:self.signatureButton];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backButton];
+    
 }
 
 #pragma mark - 懒加载
@@ -43,10 +45,20 @@ const int buttonMargin = 20;
     return _backButton;
 }
 
+- (UIImageView *)imageView {
+    if (_imageView == nil) {
+        _imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"xiang"]];
+        _imageView.contentMode = UIViewContentModeScaleAspectFit;
+    }
+    return _imageView;
+}
+
 - (UIScrollView *)scrollView {
     if (_scrollView == nil) {
         _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, NTScreenWidth, NTScreenHeight - 100)];
         _scrollView.backgroundColor = [UIColor lightGrayColor];
+        _scrollView.contentSize = CGSizeMake(_scrollView.width, self.imageView.height);
+        [_scrollView addSubview:self.imageView];
     }
     return _scrollView;
 }

@@ -30,7 +30,7 @@ const static int imageViewHeight = 100;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     if (indexPath.section == 0) {
-        cell.textLabel.text = @"nineteen";
+        cell.textLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"];
     } else {
         cell.textLabel.text = @"设置";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

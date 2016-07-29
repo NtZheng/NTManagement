@@ -59,7 +59,9 @@
     // 后台交互
     [[NTAFNetworking shareAFNetworkingService] doGetRequest:[NSString stringWithFormat:@"http://mountainfile.applinzi.com/login.php?mobile=%@",phoneTextField.text] result:^(id responseObject, NSError *error) {
         NSString *result = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
-        if ([result isEqualToString:@"1"]) {
+        if (![result isEqualToString:@"0"]) {
+            // 保存用户名
+            [[NSUserDefaults standardUserDefaults] setObject:[[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding] forKey:@"userName"];
             // 保存登录状态
             [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"isLogin"];
             [[NSUserDefaults standardUserDefaults] setObject:phoneTextField.text forKey:@"phoneNumber"];
