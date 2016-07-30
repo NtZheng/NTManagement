@@ -20,8 +20,6 @@
 		6A666EE41D1ADA0100F590C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A666EE21D1ADA0100F590C9 /* LaunchScreen.storyboard */; };
 		6A666EEF1D1ADA0100F590C9 /* NTManagementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A666EEE1D1ADA0100F590C9 /* NTManagementTests.m */; };
 		6A666EFA1D1ADA0100F590C9 /* NTManagementUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A666EF91D1ADA0100F590C9 /* NTManagementUITests.m */; };
-		6A6ED42A1D276098003BF471 /* KeychainTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ED4271D276098003BF471 /* KeychainTool.m */; };
-		6A6ED42B1D276098003BF471 /* PassWordTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ED4291D276098003BF471 /* PassWordTool.m */; };
 		6A6ED4321D279B99003BF471 /* NTUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ED4311D279B99003BF471 /* NTUnlockViewController.m */; };
 		6A6ED4351D279D38003BF471 /* NTUnlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ED4341D279D38003BF471 /* NTUnlockView.m */; };
 		6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7105D81D201CA70012AA99 /* NTLoginViewController.m */; };
@@ -39,10 +37,12 @@
 		6ABA51031D460604002C15BD /* NTFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA51021D460604002C15BD /* NTFlowViewController.m */; };
 		6ABA51071D460622002C15BD /* NTNormalFlowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA51051D460622002C15BD /* NTNormalFlowTableViewCell.m */; };
 		6ABA51081D460622002C15BD /* NTNormalFlowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ABA51061D460622002C15BD /* NTNormalFlowTableViewCell.xib */; };
-		6AC79E311D49ECB4002A2C26 /* NTAFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC79E301D49ECB4002A2C26 /* NTAFNetworking.m */; };
 		6ADB7D811D2A9DEF006BAFEA /* NTInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB7D801D2A9DEF006BAFEA /* NTInformationViewController.m */; };
 		6AE4B8141D23C904005C9BD8 /* NTLockResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE4B8131D23C904005C9BD8 /* NTLockResultView.m */; };
 		6AE752361D4A1FE100A4BAAB /* NTUnreadedFileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE752351D4A1FE100A4BAAB /* NTUnreadedFileModel.m */; };
+		6AF25E7C1D4C8C0F00F693F0 /* KeychainTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF25E761D4C8C0F00F693F0 /* KeychainTool.m */; };
+		6AF25E7D1D4C8C0F00F693F0 /* PassWordTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF25E781D4C8C0F00F693F0 /* PassWordTool.m */; };
+		6AF25E7E1D4C8C0F00F693F0 /* NTAFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF25E7B1D4C8C0F00F693F0 /* NTAFNetworking.m */; };
 		6AFDF6471D4AE96A0004D97E /* NTFlowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDF6461D4AE96A0004D97E /* NTFlowModel.m */; };
 		CD12DC789B976C73B52E7864 /* libPods-NTManagementUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20A17B8B337DACFA48CBB4E /* libPods-NTManagementUITests.a */; };
 /* End PBXBuildFile section */
@@ -90,10 +90,6 @@
 		6A666EF51D1ADA0100F590C9 /* NTManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A666EF91D1ADA0100F590C9 /* NTManagementUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTManagementUITests.m; sourceTree = "<group>"; };
 		6A666EFB1D1ADA0100F590C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A6ED4261D276098003BF471 /* KeychainTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainTool.h; sourceTree = "<group>"; };
-		6A6ED4271D276098003BF471 /* KeychainTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainTool.m; sourceTree = "<group>"; };
-		6A6ED4281D276098003BF471 /* PassWordTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassWordTool.h; sourceTree = "<group>"; };
-		6A6ED4291D276098003BF471 /* PassWordTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassWordTool.m; sourceTree = "<group>"; };
 		6A6ED4301D279B99003BF471 /* NTUnlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnlockViewController.h; sourceTree = "<group>"; };
 		6A6ED4311D279B99003BF471 /* NTUnlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnlockViewController.m; sourceTree = "<group>"; };
 		6A6ED4331D279D38003BF471 /* NTUnlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnlockView.h; sourceTree = "<group>"; };
@@ -126,8 +122,6 @@
 		6ABA51041D460622002C15BD /* NTNormalFlowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTNormalFlowTableViewCell.h; sourceTree = "<group>"; };
 		6ABA51051D460622002C15BD /* NTNormalFlowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTNormalFlowTableViewCell.m; sourceTree = "<group>"; };
 		6ABA51061D460622002C15BD /* NTNormalFlowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NTNormalFlowTableViewCell.xib; path = ../View/NTNormalFlowTableViewCell.xib; sourceTree = "<group>"; };
-		6AC79E2F1D49ECB4002A2C26 /* NTAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTAFNetworking.h; sourceTree = "<group>"; };
-		6AC79E301D49ECB4002A2C26 /* NTAFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTAFNetworking.m; sourceTree = "<group>"; };
 		6ADB7D7F1D2A9DEF006BAFEA /* NTInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTInformationViewController.h; sourceTree = "<group>"; };
 		6ADB7D801D2A9DEF006BAFEA /* NTInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTInformationViewController.m; sourceTree = "<group>"; };
 		6AE4B8121D23C904005C9BD8 /* NTLockResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLockResultView.h; sourceTree = "<group>"; };
@@ -135,6 +129,12 @@
 		6AE752341D4A1FE100A4BAAB /* NTUnreadedFileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnreadedFileModel.h; sourceTree = "<group>"; };
 		6AE752351D4A1FE100A4BAAB /* NTUnreadedFileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnreadedFileModel.m; sourceTree = "<group>"; };
 		6AEC8A911D1C197C00648C3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AF25E751D4C8C0F00F693F0 /* KeychainTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainTool.h; sourceTree = "<group>"; };
+		6AF25E761D4C8C0F00F693F0 /* KeychainTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainTool.m; sourceTree = "<group>"; };
+		6AF25E771D4C8C0F00F693F0 /* PassWordTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassWordTool.h; sourceTree = "<group>"; };
+		6AF25E781D4C8C0F00F693F0 /* PassWordTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassWordTool.m; sourceTree = "<group>"; };
+		6AF25E7A1D4C8C0F00F693F0 /* NTAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTAFNetworking.h; sourceTree = "<group>"; };
+		6AF25E7B1D4C8C0F00F693F0 /* NTAFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTAFNetworking.m; sourceTree = "<group>"; };
 		6AFDF6451D4AE96A0004D97E /* NTFlowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFlowModel.h; sourceTree = "<group>"; };
 		6AFDF6461D4AE96A0004D97E /* NTFlowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFlowModel.m; sourceTree = "<group>"; };
 		6DB09DB2A985706F0CDF5F3E /* Pods-NTManagementTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTManagementTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NTManagementTests/Pods-NTManagementTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -340,12 +340,8 @@
 		6A6ED4251D27607E003BF471 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				6A6ED4261D276098003BF471 /* KeychainTool.h */,
-				6A6ED4271D276098003BF471 /* KeychainTool.m */,
-				6A6ED4281D276098003BF471 /* PassWordTool.h */,
-				6A6ED4291D276098003BF471 /* PassWordTool.m */,
-				6AC79E2F1D49ECB4002A2C26 /* NTAFNetworking.h */,
-				6AC79E301D49ECB4002A2C26 /* NTAFNetworking.m */,
+				6AF25E741D4C8C0F00F693F0 /* Keychain */,
+				6AF25E791D4C8C0F00F693F0 /* Network */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -567,6 +563,26 @@
 				6A6ED42C1D279B23003BF471 /* Unlock */,
 			);
 			path = Begin;
+			sourceTree = "<group>";
+		};
+		6AF25E741D4C8C0F00F693F0 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				6AF25E751D4C8C0F00F693F0 /* KeychainTool.h */,
+				6AF25E761D4C8C0F00F693F0 /* KeychainTool.m */,
+				6AF25E771D4C8C0F00F693F0 /* PassWordTool.h */,
+				6AF25E781D4C8C0F00F693F0 /* PassWordTool.m */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		6AF25E791D4C8C0F00F693F0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6AF25E7A1D4C8C0F00F693F0 /* NTAFNetworking.h */,
+				6AF25E7B1D4C8C0F00F693F0 /* NTAFNetworking.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		6AFF739F1D2255B9000DFBD0 /* Lock */ = {
@@ -875,9 +891,10 @@
 				6AB824FB1D240DBB00B26D18 /* NTLockViewSingleton.m in Sources */,
 				6A59B1811D2CAC940083DF1E /* NTUnreadedTableViewController.m in Sources */,
 				6A7105DD1D201CA70012AA99 /* NTLoginViewController.m in Sources */,
+				6AF25E7C1D4C8C0F00F693F0 /* KeychainTool.m in Sources */,
 				6A6ED4351D279D38003BF471 /* NTUnlockView.m in Sources */,
-				6AC79E311D49ECB4002A2C26 /* NTAFNetworking.m in Sources */,
 				6AA7628B1D22A27600E93E50 /* AppDelegate.m in Sources */,
+				6AF25E7E1D4C8C0F00F693F0 /* NTAFNetworking.m in Sources */,
 				6AA762891D22A27600E93E50 /* UIButton+Extension.m in Sources */,
 				6ADB7D811D2A9DEF006BAFEA /* NTInformationViewController.m in Sources */,
 				6AE752361D4A1FE100A4BAAB /* NTUnreadedFileModel.m in Sources */,
@@ -886,9 +903,9 @@
 				6AA7627B1D229E6400E93E50 /* NTLockViewController.m in Sources */,
 				6AA066DA1D48708300D253D1 /* NTLatestFlowTableViewCell.m in Sources */,
 				6AA7628E1D22A38800E93E50 /* NTLockView.m in Sources */,
+				6AF25E7D1D4C8C0F00F693F0 /* PassWordTool.m in Sources */,
 				6AA7628C1D22A27600E93E50 /* main.m in Sources */,
 				6A3B03361D48CE2A00355C98 /* NTPlaceholderTextView.m in Sources */,
-				6A6ED42B1D276098003BF471 /* PassWordTool.m in Sources */,
 				6AFDF6471D4AE96A0004D97E /* NTFlowModel.m in Sources */,
 				6A60FD5B1D26C5A9002F9C88 /* NTSettingTableViewController.m in Sources */,
 				6A19DEBA1D48A5C80074A7DB /* NTSignatureViewController.m in Sources */,
@@ -897,7 +914,6 @@
 				6ABA51031D460604002C15BD /* NTFlowViewController.m in Sources */,
 				6A7E4E191D214184000E68C1 /* NTLoginTableViewCell.m in Sources */,
 				6AB824F81D2405EC00B26D18 /* NTTabBarController.m in Sources */,
-				6A6ED42A1D276098003BF471 /* KeychainTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

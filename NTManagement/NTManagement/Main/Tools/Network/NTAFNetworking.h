@@ -12,6 +12,9 @@
 @interface NTAFNetworking : NSObject
 
 + (instancetype)shareAFNetworkingService;
+
+#pragma mark - API
 - (void)doGetRequest: (NSString *)URL result: (void(^)(id responseObject, NSError *error))resultBlock;
+- (void)doDownloadTask:(NSString *)URL progress:(void (^)(NSProgress *download))downloadBlock handler:(void(^)(NSURLResponse *response, NSURL *filePath, NSError *error))handler;
 
 @end

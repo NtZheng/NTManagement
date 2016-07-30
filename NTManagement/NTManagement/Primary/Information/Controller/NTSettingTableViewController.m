@@ -20,6 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBar.alpha = 1.0;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    self.navigationController.navigationBarHidden = NO;
     self.navigationController.navigationBar.alpha = 1.0;
 }
 
