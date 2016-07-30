@@ -28,6 +28,11 @@ const static int imageViewHeight = 150;
     self.navigationController.navigationBarHidden = YES;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    self.navigationController.navigationBarHidden = YES;
+}
+
 #pragma mark - dataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
@@ -74,7 +79,7 @@ const static int imageViewHeight = 150;
     if (offsetH != 0) {
         self.navigationController.navigationBarHidden = NO;
     }
-    self.navigationController.navigationBar.alpha = offsetH/(imageViewHeight - 64);;
+    self.navigationController.navigationBar.alpha = offsetH/(imageViewHeight - 64);
 }
 
 @end
