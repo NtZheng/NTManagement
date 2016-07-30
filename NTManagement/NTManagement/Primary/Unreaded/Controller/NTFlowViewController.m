@@ -29,7 +29,7 @@
     
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.flows = [NSMutableArray array];
-        [[NTAFNetworking shareAFNetworkingService] doGetRequest:[[NSString stringWithFormat:@"http://mountainfile.applinzi.com/returnfileinfo.php?filename=%@&request=flow",[[NSUserDefaults standardUserDefaults] objectForKey:@"currentFileName"]] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] result:^(id responseObject, NSError *error) {
+        [[NTAFNetworking shareAFNetworkingService] doGetRequest:[NTFlowURL([[NSUserDefaults standardUserDefaults] objectForKey:@"currentFileName"]) stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] result:^(id responseObject, NSError *error) {
             
             NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
             NSArray *array = [dictionary objectForKey:@"data"];

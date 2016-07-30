@@ -23,7 +23,7 @@
     [super viewDidLoad];
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.unreadedFiles = [NSMutableArray array];
-        [[NTAFNetworking shareAFNetworkingService] doGetRequest:[NSString stringWithFormat:@"http://mountainfile.applinzi.com/returnfile.php?mobile=%@&request=0",[[NSUserDefaults standardUserDefaults] objectForKey:@"phoneNumber"]] result:^(id responseObject, NSError *error) {
+        [[NTAFNetworking shareAFNetworkingService] doGetRequest:NTUnreadedFileURL([[NSUserDefaults standardUserDefaults] objectForKey:@"phoneNumber"]) result:^(id responseObject, NSError *error) {
             if (error == nil) {
                 NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
                 NSArray *array = [dictionary objectForKey:@"data"];

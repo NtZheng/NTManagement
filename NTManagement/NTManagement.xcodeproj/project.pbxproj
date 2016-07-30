@@ -71,6 +71,7 @@
 		6A19DEB61D4897840074A7DB /* NTUnreadedDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUnreadedDetailsViewController.m; sourceTree = "<group>"; };
 		6A19DEB81D48A5C80074A7DB /* NTSignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSignatureViewController.h; sourceTree = "<group>"; };
 		6A19DEB91D48A5C80074A7DB /* NTSignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSignatureViewController.m; sourceTree = "<group>"; };
+		6A2A8CEC1D4C7243009085CE /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		6A3B03341D48CE2A00355C98 /* NTPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTPlaceholderTextView.h; sourceTree = "<group>"; };
 		6A3B03351D48CE2A00355C98 /* NTPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTPlaceholderTextView.m; sourceTree = "<group>"; };
 		6A59B17F1D2CAC940083DF1E /* NTUnreadedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUnreadedTableViewController.h; sourceTree = "<group>"; };
@@ -495,6 +496,7 @@
 				6AA762861D22A27600E93E50 /* AppDelegate.m */,
 				6AA762871D22A27600E93E50 /* main.m */,
 				6AA762881D22A27600E93E50 /* PrefixHeader.pch */,
+				6A2A8CEC1D4C7243009085CE /* Constant.h */,
 			);
 			path = Others;
 			sourceTree = "<group>";
