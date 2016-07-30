@@ -7,6 +7,7 @@
 //
 
 #import "NTUnreadedDetailsViewController.h"
+#import "NTFlowViewController.h"
 
 #define buttonWidth ((NTScreenWidth - buttonMargin * 3) / 2)
 
@@ -107,6 +108,14 @@ const int buttonMargin = 20;
 
 - (void)signatureButtonAction {
     [self performSegueWithIdentifier:@"goIntoSignatureViewController" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"goIntoFlowViewController"]) {
+        ((NTFlowViewController *)segue.destinationViewController).fileName = self.fileName;
+    } else if([segue.identifier isEqualToString:@"goIntoSignatureViewController"]) {
+        
+    }
 }
 
 @end

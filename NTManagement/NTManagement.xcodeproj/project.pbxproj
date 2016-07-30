@@ -186,12 +186,12 @@
 		6A48AF0B1D2CAC6C00F265F1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6ABA51011D460604002C15BD /* NTFlowViewController.h */,
-				6ABA51021D460604002C15BD /* NTFlowViewController.m */,
 				6A59B17F1D2CAC940083DF1E /* NTUnreadedTableViewController.h */,
 				6A59B1801D2CAC940083DF1E /* NTUnreadedTableViewController.m */,
 				6A19DEB51D4897840074A7DB /* NTUnreadedDetailsViewController.h */,
 				6A19DEB61D4897840074A7DB /* NTUnreadedDetailsViewController.m */,
+				6ABA51011D460604002C15BD /* NTFlowViewController.h */,
+				6ABA51021D460604002C15BD /* NTFlowViewController.m */,
 				6A19DEB81D48A5C80074A7DB /* NTSignatureViewController.h */,
 				6A19DEB91D48A5C80074A7DB /* NTSignatureViewController.m */,
 			);

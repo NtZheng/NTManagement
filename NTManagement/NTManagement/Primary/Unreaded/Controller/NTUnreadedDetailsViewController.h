@@ -10,4 +10,6 @@
 
 @interface NTUnreadedDetailsViewController : UIViewController
 
+@property (nonatomic, copy) NSString *fileName;
+
 @end

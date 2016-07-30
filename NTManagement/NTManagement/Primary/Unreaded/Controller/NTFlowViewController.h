@@ -10,4 +10,6 @@
 
 @interface NTFlowViewController : UIViewController
 
+@property (nonatomic, copy) NSString *fileName;
+
 @end

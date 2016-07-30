@@ -10,6 +10,7 @@
 #import "NTUnreadedTableViewCell.h"
 #import "MJRefresh.h"
 #import "NTUnreadedFileModel.h"
+#import "NTUnreadedDetailsViewController.h"
 
 @interface NTUnreadedTableViewController ()
 
@@ -72,9 +73,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NTUnreadedTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    [[NSUserDefaults standardUserDefaults] setObject:cell.nameTextView.text forKey:@"currentFileName"];
     [self performSegueWithIdentifier:@"goIntoDetailsUnreadedViewController" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NTUnreadedTableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.tableView.indexPathForSelectedRow];
+    ((NTUnreadedDetailsViewController *)segue.destinationViewController).fileName = cell.nameTextView.text;
 }
 
 
